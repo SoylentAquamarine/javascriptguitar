@@ -1,0 +1,1589 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Javascript Guitar">
+
+<title>Javascript Guitar - Barre Chords</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<script language="javascript">
+<!--
+var z=1
+var y=1
+n1 = new Image(31,13);n1.src = "note1.gif";n2 = new Image(31,13);n2.src = "note2.gif";n3 = new Image(31,13);n3.src = "note3.gif";n4 = new Image(31,13);n4.src = "note4.gif";n5 = new Image(31,13);n5.src = "note5.gif";n6 = new Image(31,13);n6.src = "note6.gif";n7 = new Image(31,13);n7.src = "note7.gif";n8 = new Image(31,13);n8.src = "note8.gif";n25 = new Image(31,13);n25.src = "note25.gif";n45 = new Image(31,13);n45.src = "note45.gif";n65 = new Image(31,13);n65.src = "note65.gif";n75 = new Image(31,13);n75.src = "note75.gif";n21 = new Image(31,13);n21.src = "note21.gif";n41 = new Image(31,13);n41.src = "note41.gif";n61 = new Image(31,13);n61.src = "note61.gif";n71 = new Image(31,13);n71.src = "note71.gif";n215 = new Image(31,13);n215.src = "note215.gif";n415 = new Image(31,13);n415.src = "note415.gif";n615 = new Image(31,13);n615.src = "note615.gif";n715 = new Image(31,13);n715.src = "note715.gif";n22 = new Image(31,13);n22.src = "note22.gif";n42 = new Image(31,13);n42.src = "note42.gif";n62 = new Image(31,13);n62.src = "note62.gif";n72 = new Image(31,13);n72.src = "note72.gif";n225 = new Image(31,13);n225.src = "note225.gif";n425 = new Image(31,13);n425.src = "note425.gif";n625 = new Image(31,13);n625.src = "note625.gif";n725 = new Image(31,13);n725.src = "note725.gif";n23 = new Image(31,13);n23.src = "note23.gif";n43 = new Image(31,13);n43.src = "note43.gif";n63 = new Image(31,13);n63.src = "note63.gif";n73 = new Image(31,13);n73.src = "note73.gif";n235 = new Image(31,13);n235.src = "note235.gif";n435 = new Image(31,13);n435.src = "note435.gif";n635 = new Image(31,13);n635.src = "note635.gif";n735 = new Image(31,13);n735.src = "note735.gif";n24 = new Image(31,13);n24.src = "note24.gif";n44 = new Image(31,13);n44.src = "note44.gif";n64 = new Image(31,13);n64.src = "note64.gif";n74 = new Image(31,13);n74.src = "note74.gif";n245 = new Image(31,13);n245.src = "note245.gif";n445 = new Image(31,13);n445.src = "note445.gif";n645 = new Image(31,13);n645.src = "note645.gif";n745 = new Image(31,13);n745.src = "note745.gif";
+function L(imgDocID,imgObjName) {
+document.images[imgDocID].src = eval(imgObjName + ".src")
+}
+function doit()
+{if (y==1 && z==1)
+{w=3;
+processother(this.form);
+processeshape(this.form);
+processashape(this.form);
+}
+if (y==2 && z==2)
+{w=1;
+processother(this.form);
+processeshape(this.form);
+processashape(this.form);}
+if (y==1 && z==2)
+{w=2;
+processother(this.form);
+processeshape(this.form);
+processashape(this.form);
+}
+if (y==2 && z==1)
+{w=4;
+processother(this.form);
+processeshape(this.form);
+processashape(this.form);
+}
+}
+function resetme()
+{L('a0','n8');
+L('a1','n1');
+L('a2','n1');
+L('a3','n1');
+L('a4','n1');
+L('a5','n1');
+L('a6','n1');
+L('a7','n1');
+L('a8','n1');
+L('a9','n1');
+L('a10','n1');
+L('a11','n1');
+L('a12','n3');
+L('a13','n1');
+L('a14','n1');
+L('a15','n1');
+L('a16','n1');
+L('a17','n1');
+L('a18','n1');
+L('a19','n1');
+L('a20','n1');
+L('a21','n1');
+L('a22','n1');
+L('b0','n8');
+L('b1','n1');
+L('b2','n1');
+L('b3','n1');
+L('b4','n1');
+L('b5','n1');
+L('b6','n1');
+L('b7','n1');
+L('b8','n1');
+L('b9','n1');
+L('b10','n1');
+L('b11','n1');
+L('b12','n5');
+L('b13','n1');
+L('b14','n1');
+L('b15','n1');
+L('b16','n1');
+L('b17','n1');
+L('b18','n1');
+L('b19','n1');
+L('b20','n1');
+L('b21','n1');
+L('b22','n1');
+L('c0','n8');
+L('c1','n1');
+L('c2','n1');
+L('c3','n3');
+L('c4','n1');
+L('c5','n3');
+L('c6','n1');
+L('c7','n3');
+L('c8','n1');
+L('c9','n3');
+L('c10','n1');
+L('c11','n1');
+L('c12','n1');
+L('c13','n1');
+L('c14','n1');
+L('c15','n3');
+L('c16','n1');
+L('c17','n3');
+L('c18','n1');
+L('c19','n3');
+L('c20','n1');
+L('c21','n3');
+L('c22','n1');
+L('d0','n8');
+L('d1','n1');
+L('d2','n1');
+L('d3','n5');
+L('d4','n1');
+L('d5','n5');
+L('d6','n1');
+L('d7','n5');
+L('d8','n1');
+L('d9','n5');
+L('d10','n1');
+L('d11','n1');
+L('d12','n1');
+L('d13','n1');
+L('d14','n1');
+L('d15','n5');
+L('d16','n1');
+L('d17','n5');
+L('d18','n1');
+L('d19','n5');
+L('d20','n1');
+L('d21','n5');
+L('d22','n1');
+L('e0','n8');
+L('e1','n1');
+L('e2','n1');
+L('e3','n1');
+L('e4','n1');
+L('e5','n1');
+L('e6','n1');
+L('e7','n1');
+L('e8','n1');
+L('e9','n1');
+L('e10','n1');
+L('e11','n1');
+L('e12','n3');
+L('e13','n1');
+L('e14','n1');
+L('e15','n1');
+L('e16','n1');
+L('e17','n1');
+L('e18','n1');
+L('e19','n1');
+L('e20','n1');
+L('e21','n1');
+L('e22','n1');
+L('f0','n8');
+L('f1','n1');
+L('f2','n1');
+L('f3','n1');
+L('f4','n1');
+L('f5','n1');
+L('f6','n1');
+L('f7','n1');
+L('f8','n1');
+L('f9','n1');
+L('f10','n1');
+L('f11','n1');
+L('f12','n5');
+L('f13','n1');
+L('f14','n1');
+L('f15','n1');
+L('f16','n1');
+L('f17','n1');
+L('f18','n1');
+L('f19','n1');
+L('f20','n1');
+L('f21','n1');
+L('f22','n1');
+}
+function getSelectedIndexother() 
+{return document.g.selectother.selectedIndex
+}
+function getSelectedIndexashape() 
+{return document.g.selectashape.selectedIndex
+}
+function getSelectedIndexeshape() 
+{return document.g.selecteshape.selectedIndex
+}
+function processeshape(form)
+{if (getSelectedIndexeshape()==(0))
+{if (w==1)
+{L('a8','n2');
+L('b8','n2');
+L('c9','n4');
+L('d10','n2');
+L('e10','n2');
+L('f8','n2');
+}
+if (w==2)
+{L('a8','n25');
+L('b8','n2');
+L('c9','n4');
+L('d10','n25');
+L('e10','n2');
+L('f8','n25');
+}
+if (w==3)
+{L('a8','n215');
+L('b8','n21');
+L('c9','n42');
+L('d10','n245');
+L('e10','n23');
+L('f8','n215');
+}
+if (w==4)
+{L('a8','n21');
+L('b8','n21');
+L('c9','n42');
+L('d10','n24');
+L('e10','n23');
+L('f8','n21');
+}
+document.g.o.value=("C");
+document.g.t.value=("C,A,D,F#,A,C");
+}
+if (getSelectedIndexeshape()==(1))
+{if (w==1)
+{L('a9','n2');
+L('b9','n2');
+L('c10','n2');
+L('d11','n2');
+L('e11','n2');
+L('f9','n2');
+}
+if (w==2)
+{L('a9','n25');
+L('b9','n2');
+L('c10','n2');
+L('d11','n25');
+L('e11','n2');
+L('f9','n25');
+}
+if (w==3)
+{L('a9','n215');
+L('b9','n21');
+L('c10','n22');
+L('d11','n245');
+L('e11','n23');
+L('f9','n215');
+}
+if (w==4)
+{L('a9','n21');
+L('b9','n21');
+L('c10','n22');
+L('d11','n24');
+L('e11','n23');
+L('f9','n21');
+}
+document.g.o.value=("C#");
+document.g.t.value=("C#,A#,D#,G,A#,C#");
+}
+if (getSelectedIndexeshape()==(2))
+{if (w==1)
+{L('a10','n2');
+L('b10','n2');
+L('c11','n2');
+L('d12','n2');
+L('e12','n4');
+L('f10','n2');
+}
+if (w==2)
+{L('a10','n25');
+L('b10','n2');
+L('c11','n2');
+L('d12','n25');
+L('e12','n4');
+L('f10','n25');
+}
+if (w==3)
+{L('a10','n215');
+L('b10','n21');
+L('c11','n22');
+L('d12','n245');
+L('e12','n43');
+L('f10','n215');
+}
+if (w==4)
+{L('a10','n21');
+L('b10','n21');
+L('c11','n22');
+L('d12','n24');
+L('e12','n43');
+L('f10','n21');
+}
+document.g.o.value=("D");
+document.g.t.value=("D,A,D,F#,A,D");
+}
+if (getSelectedIndexeshape()==(3))
+{if (w==1)
+{L('a11','n2');
+L('b11','n2');
+L('c12','n2');
+L('d13','n2');
+L('e13','n2');
+L('f11','n2');
+}
+if (w==2)
+{L('a11','n25');
+L('b11','n2');
+L('c12','n2');
+L('d13','n25');
+L('e13','n2');
+L('f11','n25');
+}
+if (w==3)
+{L('a11','n215');
+L('b11','n21');
+L('c12','n22');
+L('d13','n245');
+L('e13','n23');
+L('f11','n215');
+}
+if (w==4)
+{L('a11','n21');
+L('b11','n21');
+L('c12','n22');
+L('d13','n24');
+L('e13','n23');
+L('f11','n21');
+}
+document.g.o.value=("D#");
+document.g.t.value=("D#,A#,D#,G,A#,D#");
+}
+if (getSelectedIndexeshape()==(4))
+{if (w==1)
+{L('a0','n7');
+L('b0','n7');
+L('c1','n2');
+L('d2','n2');
+L('e2','n2');
+L('f0','n7');
+L('a12','n4');
+L('b12','n6');
+L('c13','n2');
+L('d14','n2');
+L('e14','n2');
+L('f12','n6');
+}
+if (w==2)
+{L('a0','n75');
+L('b0','n7');
+L('c1','n2');
+L('d2','n25');
+L('e2','n2');
+L('f0','n75');
+L('a12','n45');
+L('b12','n6');
+L('c13','n2');
+L('d14','n25');
+L('e14','n2');
+L('f12','n65');
+}
+if (w==3)
+{L('a0','n75');
+L('b0','n7');
+L('c1','n21');
+L('d2','n235');
+L('e2','n22');
+L('f0','n75');
+L('a12','n415');
+L('b12','n61');
+L('c13','n22');
+L('d14','n245');
+L('e14','n23');
+L('f12','n615');
+}
+if (w==4)
+{L('a0','n7');
+L('b0','n7');
+L('c1','n21');
+L('d2','n23');
+L('e2','n22');
+L('f0','n7');
+L('a12','n41');
+L('b12','n61');
+L('c13','n22');
+L('d14','n24');
+L('e14','n23');
+L('f12','n61');
+}
+document.g.o.value=("E");
+document.g.t.value=("E,B,E,G#,B,E");
+}
+if (getSelectedIndexeshape()==(5))
+{if (w==1)
+{L('a1','n2');
+L('b1','n2');
+L('c2','n2');
+L('d3','n6');
+L('e3','n2');
+L('f1','n2');
+L('a13','n2');
+L('b13','n2');
+L('c14','n2');
+L('d15','n6');
+L('e15','n2');
+L('f13','n2');
+}
+if (w==2)
+{L('a1','n25');
+L('b1','n2');
+L('c2','n2');
+L('d3','n65');
+L('e3','n2');
+L('f1','n25');
+L('a13','n25');
+L('b13','n2');
+L('c14','n2');
+L('d15','n65');
+L('e15','n2');
+L('f13','n25');
+}
+if (w==3)
+{L('a1','n215');
+L('b1','n21');
+L('c2','n22');
+L('d3','n645');
+L('e3','n23');
+L('f1','n215');
+L('a13','n215');
+L('b13','n21');
+L('c14','n22');
+L('d15','n645');
+L('e15','n23');
+L('f13','n215');
+}
+if (w==4)
+{L('a1','n21');
+L('b1','n21');
+L('c2','n22');
+L('d3','n64');
+L('e3','n23');
+L('f1','n21');
+L('a13','n21');
+L('b13','n21');
+L('c14','n22');
+L('d15','n64');
+L('e15','n23');
+L('f13','n21');
+}
+document.g.o.value=("F");
+document.g.t.value=("F,C,F,A,C,F");
+}
+if (getSelectedIndexeshape()==(6))
+{if (w==1)
+{L('a2','n2');
+L('b2','n2');
+L('c3','n4');
+L('d4','n2');
+L('e4','n2');
+L('f2','n2');
+L('a14','n2');
+L('b14','n2');
+L('c15','n4');
+L('d16','n2');
+L('e16','n2');
+L('f14','n2');
+}
+if (w==2)
+{L('a2','n25');
+L('b2','n2');
+L('c3','n4');
+L('d4','n25');
+L('e4','n2');
+L('f2','n25');
+L('a14','n25');
+L('b14','n2');
+L('c15','n4');
+L('d16','n25');
+L('e16','n2');
+L('f14','n25');
+}
+if (w==3)
+{L('a2','n215');
+L('b2','n21');
+L('c3','n42');
+L('d4','n245');
+L('e4','n23');
+L('f2','n215');
+L('a14','n215');
+L('b14','n21');
+L('c15','n42');
+L('d16','n245');
+L('e16','n23');
+L('f14','n215');
+}
+if (w==4)
+{L('a2','n21');
+L('b2','n21');
+L('c3','n42');
+L('d4','n24');
+L('e4','n23');
+L('f2','n21');
+L('a14','n21');
+L('b14','n21');
+L('c15','n42');
+L('d16','n24');
+L('e16','n23');
+L('f14','n21');
+}
+document.g.o.value=("F#");
+document.g.t.value=("F#,C#,F#,A#,C#,F#");
+}
+if (getSelectedIndexeshape()==(7))
+{if (w==1)
+{L('a3','n2');
+L('b3','n2');
+L('c4','n2');
+L('d5','n6');
+L('e5','n2');
+L('f3','n2');
+L('a15','n2');
+L('b15','n2');
+L('c16','n2');
+L('d17','n6');
+L('e17','n2');
+L('f15','n2');
+}
+if (w==2)
+{L('a3','n25');
+L('b3','n2');
+L('c4','n2');
+L('d5','n65');
+L('e5','n2');
+L('f3','n25');
+L('a15','n25');
+L('b15','n2');
+L('c16','n2');
+L('d17','n65');
+L('e17','n2');
+L('f15','n25');
+}
+if (w==3)
+{L('a3','n215');
+L('b3','n21');
+L('c4','n22');
+L('d5','n645');
+L('e5','n23');
+L('f3','n215');
+L('a15','n215');
+L('b15','n21');
+L('c16','n22');
+L('d17','n645');
+L('e17','n23');
+L('f15','n215');
+}
+if (w==4)
+{L('a3','n21');
+L('b3','n21');
+L('c4','n22');
+L('d5','n64');
+L('e5','n23');
+L('f3','n21');
+L('a15','n21');
+L('b15','n21');
+L('c16','n22');
+L('d17','n64');
+L('e17','n23');
+L('f15','n21');
+}
+document.g.o.value=("G");
+document.g.t.value=("G,D,G,B,D,G");
+}
+if (getSelectedIndexeshape()==(8))
+{if (w==1)
+{L('a4','n2');
+L('b4','n2');
+L('c5','n4');
+L('d6','n2');
+L('e6','n2');
+L('f4','n2');
+L('a16','n2');
+L('b16','n2');
+L('c17','n4');
+L('d18','n2');
+L('e18','n2');
+L('f16','n2');
+}
+if (w==2)
+{L('a4','n25');
+L('b4','n2');
+L('c5','n4');
+L('d6','n25');
+L('e6','n2');
+L('f4','n25');
+L('a16','n25');
+L('b16','n2');
+L('c17','n4');
+L('d18','n25');
+L('e18','n2');
+L('f16','n25');
+}
+if (w==3)
+{L('a4','n215');
+L('b4','n21');
+L('c5','n42');
+L('d6','n245');
+L('e6','n23');
+L('f4','n215');
+L('a16','n215');
+L('b16','n21');
+L('c17','n42');
+L('d18','n245');
+L('e18','n23');
+L('f16','n215');
+}
+if (w==4)
+{L('a4','n21');
+L('b4','n21');
+L('c5','n42');
+L('d6','n24');
+L('e6','n23');
+L('f4','n21');
+L('a16','n21');
+L('b16','n21');
+L('c17','n42');
+L('d18','n24');
+L('e18','n23');
+L('f16','n21');
+}
+document.g.o.value=("G#");
+document.g.t.value=("G#,D#,G#,C,D#,G#");
+}
+if (getSelectedIndexeshape()==(9))
+{if (w==1)
+{L('a5','n2');
+L('b5','n2');
+L('c6','n2');
+L('d7','n6');
+L('e7','n2');
+L('f5','n2');
+}
+if (w==2)
+{L('a5','n25');
+L('b5','n2');
+L('c6','n2');
+L('d7','n65');
+L('e7','n2');
+L('f5','n25');
+}
+if (w==3)
+{L('a5','n215');
+L('b5','n21');
+L('c6','n22');
+L('d7','n645');
+L('e7','n23');
+L('f5','n215');
+}
+if (w==4)
+{L('a5','n21');
+L('b5','n21');
+L('c6','n22');
+L('d7','n64');
+L('e7','n23');
+L('f5','n21');
+}
+document.g.o.value=("A");
+document.g.t.value=("A,E,A,C#,E,A");
+}
+if (getSelectedIndexeshape()==(10))
+{if (w==1)
+{L('a6','n2');
+L('b6','n2');
+L('c7','n4');
+L('d8','n2');
+L('e8','n2');
+L('f6','n2');
+}
+if (w==2)
+{L('a6','n25');
+L('b6','n2');
+L('c7','n4');
+L('d8','n25');
+L('e8','n2');
+L('f6','n25');
+}
+if (w==3)
+{L('a6','n215');
+L('b6','n21');
+L('c7','n42');
+L('d8','n245');
+L('e8','n23');
+L('f6','n215');
+}
+if (w==4)
+{L('a6','n21');
+L('b6','n21');
+L('c7','n42');
+L('d8','n24');
+L('e8','n23');
+L('f6','n21');
+}
+document.g.o.value=("A#");
+document.g.t.value=("A#,E#,A#,D,E#,A#");
+}
+if (getSelectedIndexeshape()==(11))
+{if (w==1)
+{L('a7','n2');
+L('b7','n2');
+L('c8','n2');
+L('d9','n6');
+L('e9','n2');
+L('f7','n2');
+}
+if (w==2)
+{L('a7','n25');
+L('b7','n2');
+L('c8','n2');
+L('d9','n65');
+L('e9','n2');
+L('f7','n25');
+}
+if (w==3)
+{L('a7','n215');
+L('b7','n21');
+L('c8','n22');
+L('d9','n645');
+L('e9','n23');
+L('f7','n215');
+}
+if (w==4)
+{L('a7','n21');
+L('b7','n21');
+L('c8','n22');
+L('d9','n64');
+L('e9','n23');
+L('f7','n21');
+}
+document.g.o.value=("B");
+document.g.t.value=("B,F,B,D#,F,B");
+}
+}
+function processashape(form)
+{if (getSelectedIndexashape()==(0))
+{if (w==1)
+{L('a3','n2');
+L('b5','n2');
+L('c5','n4');
+L('d5','n6');
+L('e3','n2');
+L('a15','n2');
+L('b17','n2');
+L('c17','n4');
+L('d17','n6');
+L('e15','n2');
+}
+if (w==2)
+{L('a3','n2');
+L('b5','n2');
+L('c5','n45');
+L('d5','n6');
+L('e3','n25');
+L('a15','n2');
+L('b17','n2');
+L('c17','n45');
+L('d17','n6');
+L('e15','n25');
+}
+if (w==3)
+{L('a3','n21');
+L('b5','n24');
+L('c5','n445');
+L('d5','n64');
+L('e3','n215');
+L('a15','n21');
+L('b17','n24');
+L('c17','n445');
+L('d17','n64');
+L('e15','n215');
+}
+if (w==4)
+{L('a3','n21');
+L('b5','n24');
+L('c5','n44');
+L('d5','n64');
+L('e3','n21');
+L('a15','n21');
+L('b17','n24');
+L('c17','n44');
+L('d17','n64');
+L('e15','n21');
+}
+document.g.o.value=("C");
+document.g.t.value=("C,G,C,E,C");
+}
+if (getSelectedIndexashape()==(1))
+{if (w==1)
+{L('a4','n2');
+L('b6','n2');
+L('c6','n2');
+L('d6','n2');
+L('e4','n2');
+L('a16','n2');
+L('b18','n2');
+L('c18','n2');
+L('d18','n2');
+L('e16','n2');
+}
+if (w==2)
+{L('a4','n2');
+L('b6','n2');
+L('c6','n25');
+L('d6','n2');
+L('e4','n25');
+L('a16','n2');
+L('b18','n2');
+L('c18','n25');
+L('d18','n2');
+L('e16','n25');
+}
+if (w==3)
+{
+L('a4','n21');
+L('b6','n24');
+L('c6','n245');
+L('d6','n24');
+L('e4','n215');
+L('a16','n21');
+L('b18','n24');
+L('c18','n245');
+L('d18','n24');
+L('e16','n215');
+}
+if (w==4)
+{L('a4','n21');
+L('b6','n24');
+L('c6','n24');
+L('d6','n24');
+L('e4','n21');
+L('a16','n21');
+L('b18','n24');
+L('c18','n24');
+L('d18','n24');
+L('e16','n21');
+}
+document.g.o.value=("C#");
+document.g.t.value=("C#,G#,C#,F,C#");
+}
+if (getSelectedIndexashape()==(2))
+{if (w==1)
+{L('a5','n2');
+L('b7','n2');
+L('c7','n4');
+L('d7','n6');
+L('e5','n2');
+L('a17','n2');
+L('b19','n2');
+L('c19','n4');
+L('d19','n6');
+L('e17','n2');
+}
+if (w==2)
+{L('a5','n2');
+L('b7','n2');
+L('c7','n45');
+L('d7','n6');
+L('e5','n25');
+L('a17','n2');
+L('b19','n2');
+L('c19','n45');
+L('d19','n6');
+L('e17','n25');
+}
+if (w==3)
+{L('a5','n21');
+L('b7','n24');
+L('c7','n445');
+L('d7','n64');
+L('e5','n215');
+L('a17','n21');
+L('b19','n24');
+L('c19','n445');
+L('d19','n64');
+L('e17','n215');
+}
+if (w==4)
+{L('a5','n21');
+L('b7','n24');
+L('c7','n44');
+L('d7','n64');
+L('e5','n21');
+L('a17','n21');
+L('b19','n24');
+L('c19','n44');
+L('d19','n64');
+L('e17','n21');
+}
+document.g.o.value=("D");
+document.g.t.value=("D,A,D,F#,D");
+}
+if (getSelectedIndexashape()==(3))
+{if (w==1)
+{L('a6','n2');
+L('b8','n2');
+L('c8','n2');
+L('d8','n2');
+L('e6','n2');
+L('a18','n2');
+L('b20','n2');
+L('c20','n2');
+L('d20','n2');
+L('e18','n2');
+}
+if (w==2)
+{L('a6','n2');
+L('b8','n2');
+L('c8','n25');
+L('d8','n2');
+L('e6','n25');
+L('a18','n2');
+L('b20','n2');
+L('c20','n25');
+L('d20','n2');
+L('e18','n25');
+}
+if (w==3)
+{L('a6','n21');
+L('b8','n24');
+L('c8','n245');
+L('d8','n24');
+L('e6','n215');
+L('a18','n21');
+L('b20','n24');
+L('c20','n245');
+L('d20','n24');
+L('e18','n215');
+}
+if (w==4)
+{L('a6','n21');
+L('b8','n24');
+L('c8','n24');
+L('d8','n24');
+L('e6','n21');
+L('a18','n21');
+L('b20','n24');
+L('c20','n24');
+L('d20','n24');
+L('e18','n21');
+}
+document.g.o.value=("D#");
+document.g.t.value=("D#,A#,D#,G,D#");
+}
+if (getSelectedIndexashape()==(4))
+{if (w==1)
+{L('a7','n2');
+L('b9','n2');
+L('c9','n2');
+L('d9','n2');
+L('e7','n2');
+L('f0','n7');
+}
+if (w==2)
+{L('a7','n2');
+L('b9','n2');
+L('c9','n25');
+L('d9','n2');
+L('e7','n25');
+L('f0','n75');
+}
+if (w==3)
+{L('a7','n21');
+L('b9','n24');
+L('c9','n245');
+L('d9','n24');
+L('e7','n215');
+L('f0','n75');
+}
+if (w==4)
+{L('a7','n21');
+L('b9','n24');
+L('c9','n24');
+L('d9','n24');
+L('e7','n21');
+L('f0','n7');
+}
+document.g.o.value=("E");
+document.g.t.value=("E,E,B,E,G#,E");
+}
+if (getSelectedIndexashape()==(5))
+{if (w==1)
+{L('a8','n2');
+L('b10','n2');
+L('c10','n2');
+L('d10','n2');
+L('e8','n2');
+}
+if (w==2)
+{L('a8','n2');
+L('b10','n2');
+L('c10','n25');
+L('d10','n2');
+L('e8','n25');
+}
+if (w==3)
+{L('a8','n21');
+L('b10','n24');
+L('c10','n245');
+L('d10','n24');
+L('e8','n215');
+}
+if (w==4)
+{L('a8','n21');
+L('b10','n24');
+L('c10','n24');
+L('d10','n24');
+L('e8','n21');
+}
+document.g.o.value=("F");
+document.g.t.value=("F,C,F,A,F");
+}
+if (getSelectedIndexashape()==(6))
+{if (w==1)
+{L('a9','n2');
+L('b11','n2');
+L('c11','n2');
+L('d11','n2');
+L('e9','n2');
+}
+if (w==2)
+{L('a9','n2');
+L('b11','n2');
+L('c11','n25');
+L('d11','n2');
+L('e9','n25');
+}
+if (w==3)
+{L('a9','n21');
+L('b11','n24');
+L('c11','n245');
+L('d11','n24');
+L('e9','n215');
+}
+if (w==4)
+{L('a9','n21');
+L('b11','n24');
+L('c11','n24');
+L('d11','n24');
+L('e9','n21');
+}
+document.g.o.value=("F#");
+document.g.t.value=("F#,C#,F#,A#,F#");
+}
+if (getSelectedIndexashape()==(7))
+{if (w==1)
+{L('a10','n2');
+L('b12','n6');
+L('c12','n2');
+L('d12','n2');
+L('e10','n2');
+}
+if (w==2)
+{L('a10','n2');
+L('b12','n6');
+L('c12','n25');
+L('d12','n2');
+L('e10','n25');
+}
+if (w==3)
+{L('a10','n21');
+L('b12','n64');
+L('c12','n245');
+L('d12','n24');
+L('e10','n215');
+}
+if (w==4)
+{L('a10','n21');
+L('b12','n64');
+L('c12','n24');
+L('d12','n24');
+L('e10','n21');
+}
+document.g.o.value=("G");
+document.g.t.value=("G,D,G,B,G");
+}
+if (getSelectedIndexashape()==(8))
+{if (w==1)
+{L('a11','n2');
+L('b13','n2');
+L('c13','n2');
+L('d13','n2');
+L('e11','n2');
+}
+if (w==2)
+{
+L('a11','n2');
+L('b13','n2');
+L('c13','n25');
+L('d13','n2');
+L('e11','n25');
+}
+if (w==3)
+{
+L('a11','n21');
+L('b13','n24');
+L('c13','n245');
+L('d13','n24');
+L('e11','n215');
+}
+if (w==4)
+{
+L('a11','n21');
+L('b13','n24');
+L('c13','n24');
+L('d13','n24');
+L('e11','n21');
+}
+document.g.o.value=("G#");
+document.g.t.value=("G#,D#,G#,C,G#");
+}
+if (getSelectedIndexashape()==(9))
+{
+if (w==1)
+{
+L('a0','n7');
+L('b2','n2');
+L('c2','n4');
+L('d2','n6');
+L('e0','n7');
+L('a12','n4');
+L('b14','n2');
+L('c14','n2');
+L('d14','n2');
+L('e12','n4');
+}
+if (w==2)
+{
+L('a0','n7');
+L('b2','n2');
+L('c2','n45');
+L('d2','n6');
+L('e0','n75');
+L('a12','n4');
+L('b14','n2');
+L('c14','n25');
+L('d14','n2');
+L('e12','n45');
+}
+if (w==3)
+{
+L('a0','n7');
+L('b2','n23');
+L('c2','n415');
+L('d2','n62');
+L('e0','n75');
+L('a12','n41');
+L('b14','n24');
+L('c14','n245');
+L('d14','n24');
+L('e12','n415');
+}
+if (w==4)
+{
+L('a0','n7');
+L('b2','n23');
+L('c2','n41');
+L('d2','n62');
+L('e0','n7');
+L('a12','n41');
+L('b14','n24');
+L('c14','n24');
+L('d14','n24');
+L('e12','n41');
+}
+document.g.o.value=("A");
+document.g.t.value=("A,G#,A,C#,A");
+}
+if (getSelectedIndexashape()==(10))
+{
+if (w==1)
+{
+L('a1','n2');
+L('b3','n2');
+L('c3','n4');
+L('d3','n6');
+L('e1','n2');
+L('a13','n2');
+L('b15','n2');
+L('c15','n4');
+L('d15','n6');
+L('e13','n2');
+}
+if (w==2)
+{
+L('a1','n2');
+L('b3','n25');
+L('c3','n4');
+L('d3','n6');
+L('e1','n25');
+L('a13','n2');
+L('b15','n2');
+L('c15','n45');
+L('d15','n6');
+L('e13','n25');
+}
+if (w==3)
+{
+L('a1','n21');
+L('b3','n245');
+L('c3','n44');
+L('d3','n64');
+L('e1','n215');
+L('a13','n21');
+L('b15','n24');
+L('c15','n445');
+L('d15','n64');
+L('e13','n215');
+}
+if (w==4)
+{
+L('a1','n21');
+L('b3','n24');
+L('c3','n44');
+L('d3','n64');
+L('e1','n21');
+L('a13','n21');
+L('b15','n24');
+L('c15','n44');
+L('d15','n64');
+L('e13','n21');
+}
+document.g.o.value=("A#");
+document.g.t.value=("A#,F,A#,D,A#");
+}
+if (getSelectedIndexashape()==(11))
+{
+if (w==1)
+{
+L('a2','n2');
+L('b4','n2');
+L('c4','n2');
+L('d4','n2');
+L('e2','n2');
+L('a14','n2');
+L('b16','n2');
+L('c16','n2');
+L('d16','n2');
+L('e14','n2');
+}
+if (w==2)
+{
+L('a2','n2');
+L('b4','n2');
+L('c4','n25');
+L('d4','n2');
+L('e2','n25');
+L('a14','n2');
+L('b16','n2');
+L('c16','n25');
+L('d16','n2');
+L('e14','n25');
+}
+if (w==3)
+{
+L('a2','n21');
+L('b4','n24');
+L('c4','n245');
+L('d4','n24');
+L('e2','n215');
+L('a14','n21');
+L('b16','n24');
+L('c16','n245');
+L('d16','n24');
+L('e14','n215');
+}
+if (w==4)
+{
+L('a2','n21');
+L('b4','n24');
+L('c4','n24');
+L('d4','n24');
+L('e2','n21');
+L('a14','n21');
+L('b16','n24');
+L('c16','n24');
+L('d16','n24');
+L('e14','n21');
+}
+document.g.o.value=("B");
+document.g.t.value=("B,F#,B,D#,B");
+}
+}
+function processother(form)
+{
+if (getSelectedIndexother()==(0))
+{
+if (w==1)
+{
+L('a0','n7');
+L('b8','n2');
+L('c7','n4');
+L('d6','n2');
+L('e7','n2');
+L('f0','n7');
+}
+if (w==2)
+{
+L('a0','n75');
+L('b8','n2');
+L('c7','n4');
+L('d6','n2');
+L('e7','n25');
+L('f0','n75');
+}
+if (w==3)
+{
+L('a0','n75');
+L('b8','n24');
+L('c7','n43');
+L('d6','n21');
+L('e7','n225');
+L('f0','n75');
+}
+if (w==4)
+{
+L('a0','n7');
+L('b8','n24');
+L('c7','n43');
+L('d6','n21');
+L('e7','n22');
+L('f0','n7');
+}
+document.g.o.value=("E");
+document.g.t.value=("E,E,G#,D,E");
+}
+}
+// -->
+
+</script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+<basefont face="arial" size="3">
+<div align="center">
+	<table border="0" width="100%" cellspacing="5" cellpadding="5">
+		<tr>
+			<td>
+
+&nbsp;</td>
+			<td>
+
+<h1 align="center"><font face="Arial">Javascript Guitar</font></h1></td>
+			<td>
+
+&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="140" valign="top" align="left">
+			<!--webbot bot="Include" U-Include="../includes/left_nav.html" TAG="BODY" startspan -->
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size=3>Site Navigation</font></b></nobr>
+</td></tr><tr><td>
+<font size="2">
+<nobr><a href="../index.html"><font face="Arial" size=2>Home</font></a></nobr>
+</font>&nbsp;</td></tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../music.html"><font face="Arial" size=2>Music Stuff</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../photos.html"><font face="Arial" size=2>Photos</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../retro-computing.html"><font face="Arial" size=2>Retro Computing</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../TwistyPuzzles.html"><font face="Arial" size=2>Twisty Puzzles</font></a></nobr>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<b><font face="Arial" size="3">IT Stuff</font></b></td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../consulting.html">IT Consulting</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size="2"><a href="../projects/index.html">IT Projects Home</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../education-certification.html">Education and Certs</a></font></nobr></td></tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size="3">Javascript Guitar</font></b></nobr>
+</td></tr><tr><td>
+<nobr><a href="index.html"><font face="Arial" size="2">Note Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="barrechords.html"><font face="Arial" size="2">Barre Chord Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="chordsminmaj.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="scales.html"><font face="Arial" size="2">Scales</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chordsbig.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="b_chords.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chords.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr>
+</table>
+<br>
+<br>
+<!--webbot bot="Include" i-checksum="56706" endspan --><p>&nbsp;</p>
+			<p>&nbsp;</td>
+			<td valign="top">
+<font face="Arial">
+<center>
+<h2>Barre Chord Builder</h2>
+
+
+<nobr><img name="a0" src="images/note8.gif" border=0><img name="a1" src="images/note1.gif" border=0><img name="a2" src="images/note1.gif" border=0><img name="a3" src="images/note1.gif" border=0><img name="a4" src="images/note1.gif" border=0><img name="a5" src="images/note1.gif" border=0><img name="a6" src="images/note1.gif" border=0><img name="a7" src="images/note1.gif" border=0><img name="a8" src="images/note1.gif" border=0><img name="a9" src="images/note1.gif" border=0><img name="a10" src="images/note1.gif" border=0><img name="a11" src="images/note1.gif" border=0><img name="a12" src="images/note3.gif" border=0><img name="a13" src="images/note1.gif" border=0><img name="a14" src="images/note1.gif" border=0><img name="a15" src="images/note1.gif" border=0><img name="a16" src="images/note1.gif" border=0><img name="a17" src="images/note1.gif" border=0><img name="a18" src="images/note1.gif" border=0><img name="a19" src="images/note1.gif" border=0><img name="a20" src="images/note1.gif" border=0><img name="a21" src="images/note1.gif" border=0><img name="a22" src="images/note1.gif" border=0><br><img name="b0" src="images/note8.gif" border=0><img name="b1" src="images/note1.gif" border=0><img name="b2" src="images/note1.gif" border=0><img name="b3" src="images/note1.gif" border=0><img name="b4" src="images/note1.gif" border=0><img name="b5" src="images/note1.gif" border=0><img name="b6" src="images/note1.gif" border=0><img name="b7" src="images/note1.gif" border=0><img name="b8" src="images/note1.gif" border=0><img name="b9" src="images/note1.gif" border=0><img name="b10" src="images/note1.gif" border=0><img name="b11" src="images/note1.gif" border=0><img name="b12" src="images/note5.gif" border=0><img name="b13" src="images/note1.gif" border=0><img name="b14" src="images/note1.gif" border=0><img name="b15" src="images/note1.gif" border=0><img name="b16" src="images/note1.gif" border=0><img name="b17" src="images/note1.gif" border=0><img name="b18" src="images/note1.gif" border=0><img name="b19" src="images/note1.gif" border=0><img name="b20" src="images/note1.gif" border=0><img name="b21" src="images/note1.gif" border=0><img name="b22" src="images/note1.gif" border=0><br><img name="c0" src="images/note8.gif" border=0><img name="c1" src="images/note1.gif" border=0><img name="c2" src="images/note1.gif" border=0><img name="c3" src="images/note3.gif" border=0><img name="c4" src="images/note1.gif" border=0><img name="c5" src="images/note3.gif" border=0><img name="c6" src="images/note1.gif" border=0><img name="c7" src="images/note3.gif" border=0><img name="c8" src="images/note1.gif" border=0><img name="c9" src="images/note3.gif" border=0><img name="c10" src="images/note1.gif" border=0><img name="c11" src="images/note1.gif" border=0><img name="c12" src="images/note1.gif" border=0><img name="c13" src="images/note1.gif" border=0><img name="c14" src="images/note1.gif" border=0><img name="c15" src="images/note3.gif" border=0><img name="c16" src="images/note1.gif" border=0><img name="c17" src="images/note3.gif" border=0><img name="c18" src="images/note1.gif" border=0><img name="c19" src="images/note3.gif" border=0><img name="c20" src="images/note1.gif" border=0><img name="c21" src="images/note3.gif" border=0><img name="c22" src="images/note1.gif" border=0><br><img name="d0" src="images/note8.gif" border=0><img name="d1" src="images/note1.gif" border=0><img name="d2" src="images/note1.gif" border=0><img name="d3" src="images/note5.gif" border=0><img name="d4" src="images/note1.gif" border=0><img name="d5" src="images/note5.gif" border=0><img name="d6" src="images/note1.gif" border=0><img name="d7" src="images/note5.gif" border=0><img name="d8" src="images/note1.gif" border=0><img name="d9" src="images/note5.gif" border=0><img name="d10" src="images/note1.gif" border=0><img name="d11" src="images/note1.gif" border=0><img name="d12" src="images/note1.gif" border=0><img name="d13" src="images/note1.gif" border=0><img name="d14" src="images/note1.gif" border=0><img name="d15" src="images/note5.gif" border=0><img name="d16" src="images/note1.gif" border=0><img name="d17" src="images/note5.gif" border=0><img name="d18" src="images/note1.gif" border=0><img name="d19" src="images/note5.gif" border=0><img name="d20" src="images/note1.gif" border=0><img name="d21" src="images/note5.gif" border=0><img name="d22" src="images/note1.gif" border=0><br><img name="e0" src="images/note8.gif" border=0><img name="e1" src="images/note1.gif" border=0><img name="e2" src="images/note1.gif" border=0><img name="e3" src="images/note1.gif" border=0><img name="e4" src="images/note1.gif" border=0><img name="e5" src="images/note1.gif" border=0><img name="e6" src="images/note1.gif" border=0><img name="e7" src="images/note1.gif" border=0><img name="e8" src="images/note1.gif" border=0><img name="e9" src="images/note1.gif" border=0><img name="e10" src="images/note1.gif" border=0><img name="e11" src="images/note1.gif" border=0><img name="e12" src="images/note3.gif" border=0><img name="e13" src="images/note1.gif" border=0><img name="e14" src="images/note1.gif" border=0><img name="e15" src="images/note1.gif" border=0><img name="e16" src="images/note1.gif" border=0><img name="e17" src="images/note1.gif" border=0><img name="e18" src="images/note1.gif" border=0><img name="e19" src="images/note1.gif" border=0><img name="e20" src="images/note1.gif" border=0><img name="e21" src="images/note1.gif" border=0><img name="e22" src="images/note1.gif" border=0><br><img name="f0" src="images/note8.gif" border=0><img name="f1" src="images/note1.gif" border=0><img name="f2" src="images/note1.gif" border=0><img name="f3" src="images/note1.gif" border=0><img name="f4" src="images/note1.gif" border=0><img name="f5" src="images/note1.gif" border=0><img name="f6" src="images/note1.gif" border=0><img name="f7" src="images/note1.gif" border=0><img name="f8" src="images/note1.gif" border=0><img name="f9" src="images/note1.gif" border=0><img name="f10" src="images/note1.gif" border=0><img name="f11" src="images/note1.gif" border=0><img name="f12" src="images/note5.gif" border=0><img name="f13" src="images/note1.gif" border=0><img name="f14" src="images/note1.gif" border=0><img name="f15" src="images/note1.gif" border=0><img name="f16" src="images/note1.gif" border=0><img name="f17" src="images/note1.gif" border=0><img name="f18" src="images/note1.gif" border=0><img name="f19" src="images/note1.gif" border=0><img name="f20" src="images/note1.gif" border=0><img name="f21" src="images/note1.gif" border=0><img name="f22" src="images/note1.gif" border=0><br></nobr><form name="g">
+<p><br>
+&nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="3">
+	<tr>
+		<td colspan="2">
+		<p align="center"><b>Input Area</b></td>
+		<td>
+		<p align="center"><b>Output Area</b></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+<font face="Arial">
+<select name="selectother" onFocus="document.g.reset(); resetme();">
+<option>E7#9
+<option selected>Other Chords
+</select>
+<br>
+<select name="selectashape" onFocus="document.g.reset(); resetme();">
+<option>C
+<option>C#
+<option>D
+<option>D#
+<option>E
+<option>F
+<option>F#
+<option>G
+<option>G#
+<option>A
+<option>A#
+<option>B
+<option selected>A Shape Barre
+</select>
+<br>
+<select name="selecteshape" onFocus="document.g.reset(); resetme();">
+<option>C
+<option>C#
+<option>D
+<option>D#
+<option>E
+<option>F
+<option>F#
+<option>G
+<option>G#
+<option>A
+<option>A#
+<option>B
+<option selected>E Shape Barre
+</select>
+</font>
+		</td>
+		<td>
+<font face="Arial">
+Root Note? Red<input type="radio" name="yes1" onClick="y=1" value="V1">
+Black<input type="radio" name="yes" onClick="y=2" value="V1">
+</font></td>
+		<td>
+<font face="Arial">
+		<p align="left">The Root note is:&nbsp;
+<input type="textarea" size=2 name="o">
+</font></td>
+	</tr>
+	<tr>
+		<td>
+<font face="Arial">
+Fingerings? Show<input type="radio" name="root1" onClick="z=1" value="V1">
+Hide<input type="radio" name="root" onClick="z=2" value="V1">
+</font></td>
+		<td>These are the notes:</td>
+	</tr>
+	<tr>
+		<td>
+<font face="Arial">
+<input type=button value="Make it So" onClick="doit(this.form);"><input type=reset onClick="resetme()"></font></td>
+		<td>
+<font face="Arial">
+<input type="textarea" size=27 name="t"></font></td>
+	</tr>
+</table>
+<p>&nbsp;</form>
+</center>
+			</font>
+<p align="left">Choose from the dropdown list, select the options you want, then 
+Make it So!</p>
+<p align="left">The root note and notes are displayed to the right.&nbsp; Click 
+Reset to try again!</td>
+			<td width="15%" valign="top">
+			<!--webbot bot="Include" U-Include="../includes/right_nav.html" TAG="BODY" startspan -->
+
+
+	
+<img border="0" src="../images/Steve.jpg" width="187" height="180"><br>
+
+<table border="0" cellspacing="5" cellpadding="0">
+<tr>
+<td><font face="Arial" size=2>Website</font></td>
+<td><a target="_blank" href="https://steve.lovestoblog.com/"><font face="Arial" size=2>steve.lovestoblog.com</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Facebook</font></td>
+<td><a target="_blank" href="https://www.facebook.com/stephen.pleasants"><font face="Arial" size=2>stephen.pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>LinkedIn</font></td>
+<td><a target="_blank" href="https://www.linkedin.com/in/stephen-pleasants/"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>UpWork</font></td>
+<td><a target="_blank" href="https://www.upwork.com/freelancers/~017c1e57f0e4023e07"><font face="Arial" size=2>Stephen P.</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Reddit</font></td>
+<td><a target="_blank" href="https://www.reddit.com/user/SoylentAquaMarine/"><font face="Arial" size=2>u/SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>GitHub</font></td>
+<td><a target="_blank" href="https://github.com/SoylentAquamarine"><font face="Arial" size=2>SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>YouTube</font></td>
+<td><a target="_blank" href="https://www.youtube.com/channel/UCjzmo4L1m2vle9DffKOfpzw"><font face="Arial" size=2>@StephenPleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Credly</font></td>
+<td><a target="_blank" href="https://www.credly.com/users/stephen-pleasants"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Contact</font></td>
+<td><a href="mailto:stephen.pleasants@gmail.com?subject=from steve.lovestoblog.com"><font face="Arial" size=2>email me</font></a></td>
+</tr>
+</table>
+
+
+<!--webbot bot="Include" i-checksum="19559" endspan -->&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			&nbsp;</td>
+			<td>
+			<!--webbot bot="Include" U-Include="../includes/footer.html" TAG="BODY" startspan -->
+<basefont face="arial" size="3">
+<div align="center">
+	&nbsp;</div>
+<div align="center">
+	<font size="2"><i>Copyright &copy; 
+	1996-2026 Stephen Pleasants</i></div>
+<div align="center">
+	<i>All rights reserved</i></font></div>
+
+<!--webbot bot="Include" i-checksum="37816" endspan --></td>
+			<td>
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

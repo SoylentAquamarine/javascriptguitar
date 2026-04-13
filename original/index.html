@@ -1,0 +1,597 @@
+<html>
+<head>
+
+
+<meta name="description" content="Javascript Guitar">
+
+
+
+
+
+
+
+<basefont face="Arial" size="3">
+<title>Javascrit Guitar</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script language="javascript">
+<!--
+var y=1
+note1 = new Image(31,13);
+note1.src = "note1.gif";
+note2 = new Image(31,13);
+note2.src = "note2.gif";
+note3 = new Image(31,13);
+note3.src = "note3.gif";
+note4 = new Image(31,13);
+note4.src = "note4.gif";
+note5 = new Image(31,13);
+note5.src = "note5.gif";
+note6 = new Image(31,13);
+note6.src = "note6.gif";
+note7 = new Image(31,13);
+note7.src = "note7.gif";
+note8 = new Image(31,13);
+note8.src = "note8.gif";
+function hiLite(imgDocID,imgObjName) 
+{
+document.images[imgDocID].src = eval(imgObjName + ".src")
+}
+function test()
+{
+if (y==1)
+{
+resetme()
+}
+}
+function resetme()
+{
+hiLite('one_oh','note8');
+hiLite('one_one','note1');
+hiLite('one_two','note1');
+hiLite('one_three','note1');
+hiLite('one_four','note1');
+hiLite('one_five','note1');
+hiLite('one_six','note1');
+hiLite('one_seven','note1');
+hiLite('one_eight','note1');
+hiLite('one_nine','note1');
+hiLite('one_ten','note1');
+hiLite('one_eleven','note1');
+hiLite('one_twelve','note3');
+hiLite('one_thirteen','note1');
+hiLite('one_fourteen','note1');
+hiLite('one_fifteen','note1');
+hiLite('one_sixteen','note1');
+hiLite('one_seventeen','note1');
+hiLite('one_eighteen','note1');
+hiLite('one_nineteen','note1');
+hiLite('one_twenty','note1');
+hiLite('one_twentyone','note1');
+hiLite('one_twentytwo','note1');
+hiLite('two_oh','note8');
+hiLite('two_one','note1');
+hiLite('two_two','note1');
+hiLite('two_three','note1');
+hiLite('two_four','note1');
+hiLite('two_five','note1');
+hiLite('two_six','note1');
+hiLite('two_seven','note1');
+hiLite('two_eight','note1');
+hiLite('two_nine','note1');
+hiLite('two_ten','note1');
+hiLite('two_eleven','note1');
+hiLite('two_twelve','note5');
+hiLite('two_thirteen','note1');
+hiLite('two_fourteen','note1');
+hiLite('two_fifteen','note1');
+hiLite('two_sixteen','note1');
+hiLite('two_seventeen','note1');
+hiLite('two_eighteen','note1');
+hiLite('two_nineteen','note1');
+hiLite('two_twenty','note1');
+hiLite('two_twentyone','note1');
+hiLite('two_twentytwo','note1');
+hiLite('three_oh','note8');
+hiLite('three_one','note1');
+hiLite('three_two','note1');
+hiLite('three_three','note3');
+hiLite('three_four','note1');
+hiLite('three_five','note3');
+hiLite('three_six','note1');
+hiLite('three_seven','note3');
+hiLite('three_eight','note1');
+hiLite('three_nine','note3');
+hiLite('three_ten','note1');
+hiLite('three_eleven','note1');
+hiLite('three_twelve','note1');
+hiLite('three_thirteen','note1');
+hiLite('three_fourteen','note1');
+hiLite('three_fifteen','note3');
+hiLite('three_sixteen','note1');
+hiLite('three_seventeen','note3');
+hiLite('three_eighteen','note1');
+hiLite('three_nineteen','note3');
+hiLite('three_twenty','note1');
+hiLite('three_twentyone','note3');
+hiLite('three_twentytwo','note1');
+hiLite('four_oh','note8');
+hiLite('four_one','note1');
+hiLite('four_two','note1');
+hiLite('four_three','note5');
+hiLite('four_four','note1');
+hiLite('four_five','note5');
+hiLite('four_six','note1');
+hiLite('four_seven','note5');
+hiLite('four_eight','note1');
+hiLite('four_nine','note5');
+hiLite('four_ten','note1');
+hiLite('four_eleven','note1');
+hiLite('four_twelve','note1');
+hiLite('four_thirteen','note1');
+hiLite('four_fourteen','note1');
+hiLite('four_fifteen','note5');
+hiLite('four_sixteen','note1');
+hiLite('four_seventeen','note5');
+hiLite('four_eighteen','note1');
+hiLite('four_nineteen','note5');
+hiLite('four_twenty','note1');
+hiLite('four_twentyone','note5');
+hiLite('four_twentytwo','note1');
+hiLite('five_oh','note8');
+hiLite('five_one','note1');
+hiLite('five_two','note1');
+hiLite('five_three','note1');
+hiLite('five_four','note1');
+hiLite('five_five','note1');
+hiLite('five_six','note1');
+hiLite('five_seven','note1');
+hiLite('five_eight','note1');
+hiLite('five_nine','note1');
+hiLite('five_ten','note1');
+hiLite('five_eleven','note1');
+hiLite('five_twelve','note3');
+hiLite('five_thirteen','note1');
+hiLite('five_fourteen','note1');
+hiLite('five_fifteen','note1');
+hiLite('five_sixteen','note1');
+hiLite('five_seventeen','note1');
+hiLite('five_eighteen','note1');
+hiLite('five_nineteen','note1');
+hiLite('five_twenty','note1');
+hiLite('five_twentyone','note1');
+hiLite('five_twentytwo','note1');
+hiLite('six_oh','note8');
+hiLite('six_one','note1');
+hiLite('six_two','note1');
+hiLite('six_three','note1');
+hiLite('six_four','note1');
+hiLite('six_five','note1');
+hiLite('six_six','note1');
+hiLite('six_seven','note1');
+hiLite('six_eight','note1');
+hiLite('six_nine','note1');
+hiLite('six_ten','note1');
+hiLite('six_eleven','note1');
+hiLite('six_twelve','note5');
+hiLite('six_thirteen','note1');
+hiLite('six_fourteen','note1');
+hiLite('six_fifteen','note1');
+hiLite('six_sixteen','note1');
+hiLite('six_seventeen','note1');
+hiLite('six_eighteen','note1');
+hiLite('six_nineteen','note1');
+hiLite('six_twenty','note1');
+hiLite('six_twentyone','note1');
+hiLite('six_twentytwo','note1');
+}
+// -->
+</script>
+</head>
+<body onLoad="document.formtwo.yes[0].checked=true;">
+
+
+<center>
+<div align="center">
+	<table border="0" width="100%" cellspacing="5" cellpadding="5">
+		<tr>
+			<td>
+
+&nbsp;</td>
+			<td>
+
+<h1 align="center"><font face="Arial">Javascript Guitar</font></h1></td>
+			<td>
+
+&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="140" valign="top" align="left">
+			<!--webbot bot="Include" U-Include="../includes/left_nav.html" TAG="BODY" startspan -->
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size=3>Site Navigation</font></b></nobr>
+</td></tr><tr><td>
+<font size="2">
+<nobr><a href="../index.html"><font face="Arial" size=2>Home</font></a></nobr>
+</font>&nbsp;</td></tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../music.html"><font face="Arial" size=2>Music Stuff</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../photos.html"><font face="Arial" size=2>Photos</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../retro-computing.html"><font face="Arial" size=2>Retro Computing</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../TwistyPuzzles.html"><font face="Arial" size=2>Twisty Puzzles</font></a></nobr>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<b><font face="Arial" size="3">IT Stuff</font></b></td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../consulting.html">IT Consulting</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size="2"><a href="../projects/index.html">IT Projects Home</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../education-certification.html">Education and Certs</a></font></nobr></td></tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size="3">Javascript Guitar</font></b></nobr>
+</td></tr><tr><td>
+<nobr><a href="index.html"><font face="Arial" size="2">Note Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="barrechords.html"><font face="Arial" size="2">Barre Chord Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="chordsminmaj.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="scales.html"><font face="Arial" size="2">Scales</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chordsbig.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="b_chords.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chords.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr>
+</table>
+<br>
+<br>
+<!--webbot bot="Include" i-checksum="56706" endspan --></td>
+			<td valign="top">
+			<div align="center">
+
+<font face="Arial">
+<center>
+<h2>Note Builder</h2>
+<nobr><img name="one_oh" src="note8.gif" width=31 height=13 border=0><img name="one_one" src="note1.gif" width=31 height=13 border=0><img name="one_two" src="note1.gif" width=31 height=13 border=0><img name="one_three" src="note1.gif" width=31 height=13 border=0><img name="one_four" src="note1.gif" width=31 height=13 border=0><img name="one_five" src="note1.gif" width=31 height=13 border=0><img name="one_six" src="note1.gif" width=31 height=13 border=0><img name="one_seven" src="note1.gif" width=31 height=13 border=0><img name="one_eight" src="note1.gif" width=31 height=13 border=0><img name="one_nine" src="note1.gif" width=31 height=13 border=0><img name="one_ten" src="note1.gif" width=31 height=13 border=0><img name="one_eleven" src="note1.gif" width=31 height=13 border=0><img name="one_twelve" src="note3.gif" width=31 height=13 border=0><img name="one_thirteen" src="note1.gif" width=31 height=13 border=0><img name="one_fourteen" src="note1.gif" width=31 height=13 border=0><img name="one_fifteen" src="note1.gif" width=31 height=13 border=0><img name="one_sixteen" src="note1.gif" width=31 height=13 border=0><img name="one_seventeen" src="note1.gif" width=31 height=13 border=0><img name="one_eighteen" src="note1.gif" width=31 height=13 border=0><img name="one_nineteen" src="note1.gif" width=31 height=13 border=0><img name="one_twenty" src="note1.gif" width=31 height=13 border=0><img name="one_twentyone" src="note1.gif" width=31 height=13 border=0><img name="one_twentytwo" src="note1.gif" width=31 height=13 border=0><br><img name="two_oh" src="note8.gif" width=31 height=13 border=0><img name="two_one" src="note1.gif" width=31 height=13 border=0><img name="two_two" src="note1.gif" width=31 height=13 border=0><img name="two_three" src="note1.gif" width=31 height=13 border=0><img name="two_four" src="note1.gif" width=31 height=13 border=0><img name="two_five" src="note1.gif" width=31 height=13 border=0><img name="two_six" src="note1.gif" width=31 height=13 border=0><img name="two_seven" src="note1.gif" width=31 height=13 border=0><img name="two_eight" src="note1.gif" width=31 height=13 border=0><img name="two_nine" src="note1.gif" width=31 height=13 border=0><img name="two_ten" src="note1.gif" width=31 height=13 border=0><img name="two_eleven" src="note1.gif" width=31 height=13 border=0><img name="two_twelve" src="note5.gif" width=31 height=13 border=0><img name="two_thirteen" src="note1.gif" width=31 height=13 border=0><img name="two_fourteen" src="note1.gif" width=31 height=13 border=0><img name="two_fifteen" src="note1.gif" width=31 height=13 border=0><img name="two_sixteen" src="note1.gif" width=31 height=13 border=0><img name="two_seventeen" src="note1.gif" width=31 height=13 border=0><img name="two_eighteen" src="note1.gif" width=31 height=13 border=0><img name="two_nineteen" src="note1.gif" width=31 height=13 border=0><img name="two_twenty" src="note1.gif" width=31 height=13 border=0><img name="two_twentyone" src="note1.gif" width=31 height=13 border=0><img name="two_twentytwo" src="note1.gif" width=31 height=13 border=0><br><img name="three_oh" src="note8.gif" width=31 height=13 border=0><img name="three_one" src="note1.gif" width=31 height=13 border=0><img name="three_two" src="note1.gif" width=31 height=13 border=0><img name="three_three" src="note3.gif" width=31 height=13 border=0><img name="three_four" src="note1.gif" width=31 height=13 border=0><img name="three_five" src="note3.gif" width=31 height=13 border=0><img name="three_six" src="note1.gif" width=31 height=13 border=0><img name="three_seven" src="note3.gif" width=31 height=13 border=0><img name="three_eight" src="note1.gif" width=31 height=13 border=0><img name="three_nine" src="note3.gif" width=31 height=13 border=0><img name="three_ten" src="note1.gif" width=31 height=13 border=0><img name="three_eleven" src="note1.gif" width=31 height=13 border=0><img name="three_twelve" src="note1.gif" width=31 height=13 border=0><img name="three_thirteen" src="note1.gif" width=31 height=13 border=0><img name="three_fourteen" src="note1.gif" width=31 height=13 border=0><img name="three_fifteen" src="note3.gif" width=31 height=13 border=0><img name="three_sixteen" src="note1.gif" width=31 height=13 border=0><img name="three_seventeen" src="note3.gif" width=31 height=13 border=0><img name="three_eighteen" src="note1.gif" width=31 height=13 border=0><img name="three_nineteen" src="note3.gif" width=31 height=13 border=0><img name="three_twenty" src="note1.gif" width=31 height=13 border=0><img name="three_twentyone" src="note3.gif" width=31 height=13 border=0><img name="three_twentytwo" src="note1.gif" width=31 height=13 border=0><br><img name="four_oh" src="note8.gif" width=31 height=13 border=0><img name="four_one" src="note1.gif" width=31 height=13 border=0><img name="four_two" src="note1.gif" width=31 height=13 border=0><img name="four_three" src="note5.gif" width=31 height=13 border=0><img name="four_four" src="note1.gif" width=31 height=13 border=0><img name="four_five" src="note5.gif" width=31 height=13 border=0><img name="four_six" src="note1.gif" width=31 height=13 border=0><img name="four_seven" src="note5.gif" width=31 height=13 border=0><img name="four_eight" src="note1.gif" width=31 height=13 border=0><img name="four_nine" src="note5.gif" width=31 height=13 border=0><img name="four_ten" src="note1.gif" width=31 height=13 border=0><img name="four_eleven" src="note1.gif" width=31 height=13 border=0><img name="four_twelve" src="note1.gif" width=31 height=13 border=0><img name="four_thirteen" src="note1.gif" width=31 height=13 border=0><img name="four_fourteen" src="note1.gif" width=31 height=13 border=0><img name="four_fifteen" src="note5.gif" width=31 height=13 border=0><img name="four_sixteen" src="note1.gif" width=31 height=13 border=0><img name="four_seventeen" src="note5.gif" width=31 height=13 border=0><img name="four_eighteen" src="note1.gif" width=31 height=13 border=0><img name="four_nineteen" src="note5.gif" width=31 height=13 border=0><img name="four_twenty" src="note1.gif" width=31 height=13 border=0><img name="four_twentyone" src="note5.gif" width=31 height=13 border=0><img name="four_twentytwo" src="note1.gif" width=31 height=13 border=0><br><img name="five_oh" src="note8.gif" width=31 height=13 border=0><img name="five_one" src="note1.gif" width=31 height=13 border=0><img name="five_two" src="note1.gif" width=31 height=13 border=0><img name="five_three" src="note1.gif" width=31 height=13 border=0><img name="five_four" src="note1.gif" width=31 height=13 border=0><img name="five_five" src="note1.gif" width=31 height=13 border=0><img name="five_six" src="note1.gif" width=31 height=13 border=0><img name="five_seven" src="note1.gif" width=31 height=13 border=0><img name="five_eight" src="note1.gif" width=31 height=13 border=0><img name="five_nine" src="note1.gif" width=31 height=13 border=0><img name="five_ten" src="note1.gif" width=31 height=13 border=0><img name="five_eleven" src="note1.gif" width=31 height=13 border=0><img name="five_twelve" src="note3.gif" width=31 height=13 border=0><img name="five_thirteen" src="note1.gif" width=31 height=13 border=0><img name="five_fourteen" src="note1.gif" width=31 height=13 border=0><img name="five_fifteen" src="note1.gif" width=31 height=13 border=0><img name="five_sixteen" src="note1.gif" width=31 height=13 border=0><img name="five_seventeen" src="note1.gif" width=31 height=13 border=0><img name="five_eighteen" src="note1.gif" width=31 height=13 border=0><img name="five_nineteen" src="note1.gif" width=31 height=13 border=0><img name="five_twenty" src="note1.gif" width=31 height=13 border=0><img name="five_twentyone" src="note1.gif" width=31 height=13 border=0><img name="five_twentytwo" src="note1.gif" width=31 height=13 border=0><br><img name="six_oh" src="note8.gif" width=31 height=13 border=0><img name="six_one" src="note1.gif" width=31 height=13 border=0><img name="six_two" src="note1.gif" width=31 height=13 border=0><img name="six_three" src="note1.gif" width=31 height=13 border=0><img name="six_four" src="note1.gif" width=31 height=13 border=0><img name="six_five" src="note1.gif" width=31 height=13 border=0><img name="six_six" src="note1.gif" width=31 height=13 border=0><img name="six_seven" src="note1.gif" width=31 height=13 border=0><img name="six_eight" src="note1.gif" width=31 height=13 border=0><img name="six_nine" src="note1.gif" width=31 height=13 border=0><img name="six_ten" src="note1.gif" width=31 height=13 border=0><img name="six_eleven" src="note1.gif" width=31 height=13 border=0><img name="six_twelve" src="note5.gif" width=31 height=13 border=0><img name="six_thirteen" src="note1.gif" width=31 height=13 border=0><img name="six_fourteen" src="note1.gif" width=31 height=13 border=0><img name="six_fifteen" src="note1.gif" width=31 height=13 border=0><img name="six_sixteen" src="note1.gif" width=31 height=13 border=0><img name="six_seventeen" src="note1.gif" width=31 height=13 border=0><img name="six_eighteen" src="note1.gif" width=31 height=13 border=0><img name="six_nineteen" src="note1.gif" width=31 height=13 border=0><img name="six_twenty" src="note1.gif" width=31 height=13 border=0><img name="six_twentyone" src="note1.gif" width=31 height=13 border=0><img name="six_twentytwo" src="note1.gif" width=31 height=13 border=0><br></nobr>
+
+
+
+
+
+<form name="guitar">
+<input type="button" name="c" value=" C " onClick="
+{
+test();
+hiLite('six_eight','note2');
+hiLite('six_twenty','note2');
+hiLite('five_three','note2');
+hiLite('five_fifteen','note2');
+hiLite('four_ten','note2');
+hiLite('four_twentytwo','note2');
+hiLite('three_five','note4');
+hiLite('three_seventeen','note4');
+hiLite('two_one','note2');
+hiLite('two_thirteen','note2');
+hiLite('one_eight','note2');
+hiLite('one_twenty','note2');
+}
+">
+<input type="button" name="cs" value=" C#" onClick="
+{
+test();
+hiLite('six_nine','note2');
+hiLite('six_twentyone','note2');
+hiLite('five_four','note2');
+hiLite('five_sixteen','note2');
+hiLite('four_eleven','note2');
+hiLite('three_six','note2');
+hiLite('three_eighteen','note2');
+hiLite('two_two','note2');
+hiLite('two_fourteen','note2');
+hiLite('one_nine','note2');
+hiLite('one_twentyone','note2');
+}
+">
+<input type="button" name="d" value=" D " onClick="
+{
+test();
+hiLite('six_ten','note2');
+hiLite('six_twentytwo','note2');
+hiLite('five_five','note2');
+hiLite('five_seventeen','note2');
+hiLite('four_twelve','note2');
+hiLite('four_oh','note7');
+hiLite('three_seven','note4');
+hiLite('three_nineteen','note4');
+hiLite('two_three','note2');
+hiLite('two_fifteen','note2');
+hiLite('one_ten','note2');
+hiLite('one_twentytwo','note2');
+}
+">
+<input type="button" name="ds" value=" D#" onClick="
+{
+test();
+hiLite('six_eleven','note2');
+hiLite('five_six','note2');
+hiLite('five_eighteen','note2');
+hiLite('four_thirteen','note2');
+hiLite('four_one','note2');
+hiLite('three_eight','note2');
+hiLite('three_twenty','note2');
+hiLite('two_four','note2');
+hiLite('two_sixteen','note2');
+hiLite('one_eleven','note2');
+}
+">
+<input type="button" name="e" value=" E " onClick="
+{
+test();
+hiLite('six_twelve','note6');
+hiLite('six_oh','note7');
+hiLite('five_seven','note2');
+hiLite('five_nineteen','note2');
+hiLite('four_fourteen','note2');
+hiLite('four_two','note2');
+hiLite('three_nine','note4');
+hiLite('three_twentyone','note4');
+hiLite('two_five','note2');
+hiLite('two_seventeen','note2');
+hiLite('one_twelve','note4');
+hiLite('one_oh','note7');
+}
+">
+<input type="button" name="f" value=" F " onClick="
+{
+test();
+hiLite('six_thirteen','note2');
+hiLite('six_one','note2');
+hiLite('five_eight','note2');
+hiLite('five_twenty','note2');
+hiLite('four_fifteen','note6');
+hiLite('four_three','note6');
+hiLite('three_ten','note2');
+hiLite('three_twentytwo','note2');
+hiLite('two_six','note2');
+hiLite('two_eighteen','note2');
+hiLite('one_thirteen','note2');
+hiLite('one_one','note2');
+}
+">
+<input type="button" name="fs" value=" F#" onClick="
+{
+test();
+hiLite('six_fourteen','note2');
+hiLite('six_two','note2');
+hiLite('five_nine','note2');
+hiLite('five_twentyone','note2');
+hiLite('four_sixteen','note2');
+hiLite('four_four','note2');
+hiLite('three_eleven','note2');
+hiLite('two_seven','note2');
+hiLite('two_nineteen','note2');
+hiLite('one_fourteen','note2');
+hiLite('one_two','note2');
+}
+">
+<input type="button" name="g" value=" G " onClick="
+{
+test();
+hiLite('six_fifteen','note2');
+hiLite('six_three','note2');
+hiLite('five_ten','note2');
+hiLite('five_twentytwo','note2');
+hiLite('four_seventeen','note6');
+hiLite('four_five','note6');
+hiLite('three_twelve','note2');
+hiLite('three_oh','note7');
+hiLite('two_eight','note2');
+hiLite('two_twenty','note2');
+hiLite('one_fifteen','note2');
+hiLite('one_three','note2');
+}
+">
+<input type="button" name="gs" value=" G#" onClick="
+{
+test();
+hiLite('six_sixteen','note2');
+hiLite('six_four','note2');
+hiLite('five_eleven','note2');
+hiLite('four_eighteen','note2');
+hiLite('four_six','note2');
+hiLite('three_thirteen','note2');
+hiLite('three_one','note2');
+hiLite('two_nine','note2');
+hiLite('two_twentyone','note2');
+hiLite('one_sixteen','note2');
+hiLite('one_four','note2');
+}
+">
+<input type="button" name="a" value=" A " onClick="
+{
+test();
+hiLite('six_seventeen','note2');
+hiLite('six_five','note2');
+hiLite('five_twelve','note4');
+hiLite('five_oh','note7');
+hiLite('four_nineteen','note6');
+hiLite('four_seven','note6');
+hiLite('three_fourteen','note2');
+hiLite('three_two','note2');
+hiLite('two_ten','note2');
+hiLite('two_twentytwo','note2');
+hiLite('one_seventeen','note2');
+hiLite('one_five','note2');
+}
+">
+<input type="button" name="as" value=" A#" onClick="
+{
+test();
+hiLite('six_eighteen','note2');
+hiLite('six_six','note2');
+hiLite('five_thirteen','note2');
+hiLite('five_one','note2');
+hiLite('four_twenty','note2');
+hiLite('four_eight','note2');
+hiLite('three_fifteen','note4');
+hiLite('three_three','note4');
+hiLite('two_eleven','note2');
+hiLite('one_eighteen','note2');
+hiLite('one_six','note2');
+}
+">
+<input type="button" name="b" value=" B " onClick="
+{
+test();
+hiLite('six_nineteen','note2');
+hiLite('six_seven','note2');
+hiLite('five_fourteen','note2');
+hiLite('five_two','note2');
+hiLite('four_twentyone','note6');
+hiLite('four_nine','note6');
+hiLite('three_sixteen','note2');
+hiLite('three_four','note2');
+hiLite('two_twelve','note6');
+hiLite('two_oh','note7');
+hiLite('one_nineteen','note2');
+hiLite('one_seven','note2');
+}
+">
+<br>
+<input type=reset onClick="resetme()">
+</form>
+<form name=formtwo>
+<table border=7 cellspacing=0 cellpadding=2>
+<tr>
+<td>
+<input type=radio name=yes onClick="y=1">
+</td>
+<td>
+Reset notes with each selection
+</td>
+</tr>
+<tr>
+<td>
+<input type=radio name=yes onClick="y=2">
+</td>
+<td>
+Leave Notes on Neck
+</td>
+</tr>
+</table>
+</font>
+</center>
+
+<p align="left"><font face="Arial">Click a note to show that note on the neck.&nbsp; Change the 
+option to leave the note on the neck, and if you click C, E, and G, then you can 
+see your C major triad in all positions.</font></div>
+			<p><font face="Arial">This uses the Javascript image preload and 
+			flip functionality that was new 30 years ago when I wrote this as an 
+			exercise.&nbsp; There are a few bugs and the whole thing is 
+			incomplete, I will be tweaking things.&nbsp; But, it is an example 
+			of what I used in 1996 and 1997 to learn HTML and Javascript.</font></p>
+			<p>I made all of the little graphics myself using Paintshop Pro.&nbsp; 
+			Took me a while to get it to look right, with the length, width, 
+			number of pixels, etc.&nbsp; You can view source on this or any of 
+			the jsguitar pages and see how I did it ... I had no idea what I was 
+			doing, so I am sure it is not the best way.&nbsp; But, it currently 
+			works on Chrome, Edge and Firefox browsers.&nbsp; It used to take up 
+			the whole screen back in the 90's, I think I had my screen set at 
+			800x600.&nbsp; Funny.</p>
+			<p><font face="Arial">
+			The original version in its original form can be found here --
+			<a target="_blank" href="http://steve.lovestoblog.com/wakka/notes.html">
+			http://steve.lovestoblog.com/wakka/notes.html</a> -- or you can 
+			check out the wayback machine 
+			and go to www.cstone.net/~sdp and you can find functional versions.</font></p>
+			</td>
+			<td width="15%" valign="top">
+			<!--webbot bot="Include" U-Include="../includes/right_nav.html" TAG="BODY" startspan -->
+
+
+	
+<img border="0" src="../images/Steve.jpg" width="187" height="180"><br>
+
+<table border="0" cellspacing="5" cellpadding="0">
+<tr>
+<td><font face="Arial" size=2>Website</font></td>
+<td><a target="_blank" href="https://steve.lovestoblog.com/"><font face="Arial" size=2>steve.lovestoblog.com</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Facebook</font></td>
+<td><a target="_blank" href="https://www.facebook.com/stephen.pleasants"><font face="Arial" size=2>stephen.pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>LinkedIn</font></td>
+<td><a target="_blank" href="https://www.linkedin.com/in/stephen-pleasants/"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>UpWork</font></td>
+<td><a target="_blank" href="https://www.upwork.com/freelancers/~017c1e57f0e4023e07"><font face="Arial" size=2>Stephen P.</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Reddit</font></td>
+<td><a target="_blank" href="https://www.reddit.com/user/SoylentAquaMarine/"><font face="Arial" size=2>u/SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>GitHub</font></td>
+<td><a target="_blank" href="https://github.com/SoylentAquamarine"><font face="Arial" size=2>SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>YouTube</font></td>
+<td><a target="_blank" href="https://www.youtube.com/channel/UCjzmo4L1m2vle9DffKOfpzw"><font face="Arial" size=2>@StephenPleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Credly</font></td>
+<td><a target="_blank" href="https://www.credly.com/users/stephen-pleasants"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Contact</font></td>
+<td><a href="mailto:stephen.pleasants@gmail.com?subject=from steve.lovestoblog.com"><font face="Arial" size=2>email me</font></a></td>
+</tr>
+</table>
+
+
+<!--webbot bot="Include" i-checksum="19559" endspan -->&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			&nbsp;</td>
+			<td>
+			<!--webbot bot="Include" U-Include="../includes/footer.html" TAG="BODY" startspan -->
+<basefont face="arial" size="3">
+<div align="center">
+	&nbsp;</div>
+<div align="center">
+	<font size="2"><i>Copyright &copy; 
+	1996-2026 Stephen Pleasants</i></div>
+<div align="center">
+	<i>All rights reserved</i></font></div>
+
+<!--webbot bot="Include" i-checksum="37816" endspan --></td>
+			<td>
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

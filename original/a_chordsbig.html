@@ -1,0 +1,2430 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Javascript Guitar">
+
+
+<title>Javascript Guitar - A Chords</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest"></head>
+
+
+<script language="javascript">
+<!--
+var f=1
+var c=1
+n1 = new Image(13,31);
+n1.src = "note1.gif";
+n2 = new Image(13,31);
+n2.src = "note2.gif";
+n3 = new Image(13,31);
+n3.src = "note3.gif";
+n4 = new Image(13,31);
+n4.src = "note4.gif";
+n5 = new Image(13,31);
+n5.src = "note5.gif";
+n6 = new Image(13,31);
+n6.src = "note6.gif";
+n7 = new Image(13,31);
+n7.src = "note7.gif";
+n8 = new Image(13,31);
+n8.src = "note8.gif";
+n25 = new Image(13,31);
+n25.src = "note25.gif";
+n45 = new Image(13,31);
+n45.src = "note45.gif";
+n65 = new Image(13,31);
+n65.src = "note65.gif";
+n75 = new Image(13,31);
+n75.src = "note75.gif";
+n21 = new Image(13,31);
+n21.src = "note21.gif";
+n41 = new Image(13,31);
+n41.src = "note41.gif";
+n61 = new Image(13,31);
+n61.src = "note61.gif";
+n71 = new Image(13,31);
+n71.src = "note71.gif";
+n215 = new Image(13,31);
+n215.src = "note215.gif";
+n415 = new Image(13,31);
+n415.src = "note415.gif";
+n615 = new Image(13,31);
+n615.src = "note615.gif";
+n715 = new Image(13,31);
+n715.src = "note715.gif";
+n22 = new Image(13,31);
+n22.src = "note22.gif";
+n42 = new Image(13,31);
+n42.src = "note42.gif";
+n62 = new Image(13,31);
+n62.src = "note62.gif";
+n72 = new Image(13,31);
+n72.src = "note72.gif";
+n225 = new Image(13,31);
+n225.src = "note225.gif";
+n425 = new Image(13,31);
+n425.src = "note425.gif";
+n625 = new Image(13,31);
+n625.src = "note625.gif";
+n725 = new Image(13,31);
+n725.src = "note725.gif";
+n23 = new Image(13,31);
+n23.src = "note23.gif";
+n43 = new Image(13,31);
+n43.src = "note43.gif";
+n63 = new Image(13,31);
+n63.src = "note63.gif";
+n73 = new Image(13,31);
+n73.src = "note73.gif";
+n235 = new Image(13,31);
+n235.src = "note235.gif";
+n435 = new Image(13,31);
+n435.src = "note435.gif";
+n635 = new Image(13,31);
+n635.src = "note635.gif";
+n735 = new Image(13,31);
+n735.src = "note735.gif";
+n24 = new Image(13,31);
+n24.src = "note24.gif";
+n44 = new Image(13,31);
+n44.src = "note44.gif";
+n64 = new Image(13,31);
+n64.src = "note64.gif";
+n74 = new Image(13,31);
+n74.src = "note74.gif";
+n245 = new Image(13,31);
+n245.src = "note245.gif";
+n445 = new Image(13,31);
+n445.src = "note445.gif";
+n645 = new Image(13,31);
+n645.src = "note645.gif";
+n745 = new Image(13,31);
+n745.src = "note745.gif";
+notex = new Image(13,31);
+notex.src = "note1x.gif";
+function w(imgDocID,imgObjName) 
+{
+document.images[imgDocID].src = eval(imgObjName + ".src")
+}
+function doit()
+{
+if (c==1 && f==1)
+{
+z=3;
+a(this.form);
+d(this.form);
+}
+if (c==2 && f==2)
+{
+z=1;
+a(this.form);
+d(this.form);
+}
+if (c==1 && f==2)
+{
+z=2;
+a(this.form);
+d(this.form);
+}
+if (c==2 && f==1)
+{
+z=4;
+a(this.form);
+d(this.form);
+}
+}
+function resetme()
+{w('a0','n8');
+w('a1','n1');
+w('a2','n1');
+w('a3','n1');
+w('a4','n1');
+w('a5','n1');
+w('a6','n1');
+w('a7','n1');
+w('a8','n1');
+w('a9','n1');
+w('a10','n1');
+w('a11','n1');
+w('a12','n3');
+w('a13','n1');
+w('a14','n1');
+w('a15','n1');
+w('a16','n1');
+w('a17','n1');
+w('a18','n1');
+w('a19','n1');
+w('a20','n1');
+w('a21','n1');
+w('a22','n1');
+w('b0','n8');
+w('b1','n1');
+w('b2','n1');
+w('b3','n1');
+w('b4','n1');
+w('b5','n1');
+w('b6','n1');
+w('b7','n1');
+w('b8','n1');
+w('b9','n1');
+w('b10','n1');
+w('b11','n1');
+w('b12','n5');
+w('b13','n1');
+w('b14','n1');
+w('b15','n1');
+w('b16','n1');
+w('b17','n1');
+w('b18','n1');
+w('b19','n1');
+w('b20','n1');
+w('b21','n1');
+w('b22','n1');
+w('c0','n8');
+w('c1','n1');
+w('c2','n1');
+w('c3','n3');
+w('c4','n1');
+w('c5','n3');
+w('c6','n1');
+w('c7','n3');
+w('c8','n1');
+w('c9','n3');
+w('c10','n1');
+w('c11','n1');
+w('c12','n1');
+w('c13','n1');
+w('c14','n1');
+w('c15','n3');
+w('c16','n1');
+w('c17','n3');
+w('c18','n1');
+w('c19','n3');
+w('c20','n1');
+w('c21','n3');
+w('c22','n1');
+w('d0','n8');
+w('d1','n1');
+w('d2','n1');
+w('d3','n5');
+w('d4','n1');
+w('d5','n5');
+w('d6','n1');
+w('d7','n5');
+w('d8','n1');
+w('d9','n5');
+w('d10','n1');
+w('d11','n1');
+w('d12','n1');
+w('d13','n1');
+w('d14','n1');
+w('d15','n5');
+w('d16','n1');
+w('d17','n5');
+w('d18','n1');
+w('d19','n5');
+w('d20','n1');
+w('d21','n5');
+w('d22','n1');
+w('e0','n8');
+w('e1','n1');
+w('e2','n1');
+w('e3','n1');
+w('e4','n1');
+w('e5','n1');
+w('e6','n1');
+w('e7','n1');
+w('e8','n1');
+w('e9','n1');
+w('e10','n1');
+w('e11','n1');
+w('e12','n3');
+w('e13','n1');
+w('e14','n1');
+w('e15','n1');
+w('e16','n1');
+w('e17','n1');
+w('e18','n1');
+w('e19','n1');
+w('e20','n1');
+w('e21','n1');
+w('e22','n1');
+w('f0','n8');
+w('f1','n1');
+w('f2','n1');
+w('f3','n1');
+w('f4','n1');
+w('f5','n1');
+w('f6','n1');
+w('f7','n1');
+w('f8','n1');
+w('f9','n1');
+w('f10','n1');
+w('f11','n1');
+w('f12','n5');
+w('f13','n1');
+w('f14','n1');
+w('f15','n1');
+w('f16','n1');
+w('f17','n1');
+w('f18','n1');
+w('f19','n1');
+w('f20','n1');
+w('f21','n1');
+w('f22','n1');
+}
+
+function ia() 
+{   
+return document.guitar.achord.selectedIndex
+}
+function id() 
+{
+return document.guitar.dchord.selectedIndex
+}
+function a(form)
+{
+if (ia()==(0))
+{
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c6','n2');
+w('d7','n6');
+w('e7','n2');
+w('f5','n2');
+}
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c6','n2');
+w('d7','n65');
+w('e7','n2');
+w('f5','n25');
+}
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c6','n22');
+w('d7','n645');
+w('e7','n23');
+w('f5','n215');
+}
+if (z==4)
+{
+w('a5','n21');
+w('b5','n21');
+w('c6','n22');
+w('d7','n64');
+w('e7','n23');
+w('f5','n21');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A");
+}
+if (ia()==(1))
+{
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c7','n4');
+w('d7','n6');
+w('e5','n2');
+w('f5','n2');
+}
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c7','n4');
+w('d7','n65');
+w('e5','n2');
+w('f5','n25');
+}
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c7','n44');
+w('d7','n635');
+w('e5','n21');
+w('f5','n215');
+}
+if (z==4)
+{
+w('a5','n21');
+w('b5','n21');
+w('c7','n44');
+w('d7','n63');
+w('e5','n21');
+w('f5','n21');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A sus4");
+}
+if (ia()==(2))
+{
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c7','n4');
+w('d8','n2');
+w('d4','notex');
+w('f6','n2');
+}
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c7','n45');
+w('d8','n2');
+w('d4','notex');
+w('f6','n2');
+}
+if (z==3)
+{
+w('a3','notex');
+w('b5','n21');
+w('c7','n435');
+w('d8','n24');
+w('e3','notex');
+w('f6','n22');
+}
+if (z==4)
+{
+w('a3','notex');
+w('b5','n21');
+w('c7','n43');
+w('d8','n24');
+w('d4','notex');
+w('f6','n22');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A flat5");
+}
+if (ia()==(3))
+{
+if (z==1)
+{
+w('a7','n2');
+w('b5','n2');
+w('c6','n2');
+w('d7','n6');
+w('e3','notex');
+w('f5','n2');
+}
+if (z==2)
+{
+w('a7','n2');
+w('b5','n2');
+w('c6','n2');
+w('d7','n65');
+w('e3','notex');
+w('f5','n25');
+}
+if (z==3)
+{
+w('a7','n24');
+w('b5','n21');
+w('c6','n22');
+w('d7','n635');
+w('e3','notex');
+w('f5','n215');
+}
+if (z==4)
+{
+w('a7','n24');
+w('b5','n21');
+w('c6','n22');
+w('d7','n63');
+w('e3','notex');
+w('f5','n21');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A add9");
+}
+if (ia()==(4))
+{
+if (z==1)
+{
+w('a3','notex');
+w('b3','notex');
+w('c3','notex');
+w('d7','n6');
+w('e7','n2');
+w('f5','n2');
+}
+if (z==2)
+{
+w('a3','notex');
+w('b3','notex');
+w('c3','notex');
+w('d7','n65');
+w('e7','n2');
+w('f5','n25');
+}
+if (z==3)
+{
+w('a3','notex');
+w('b3','notex');
+w('c3','notex');
+w('d7','n645');
+w('e7','n23');
+w('f5','n215');
+}
+if (z==4)
+{
+w('a3','notex');
+w('b3','notex');
+w('c3','notex');
+w('d7','n64');
+w('e7','n23');
+w('f5','n21');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A 5");
+}
+if (ia()==(5))
+{
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c5','n4');
+w('d7','n6');
+w('e7','n2');
+w('f5','n2');
+}
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c5','n4');
+w('d7','n65');
+w('e7','n2');
+w('f5','n25');
+}
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c5','n41');
+w('d7','n645');
+w('e7','n23');
+w('f5','n215');
+}
+if (z==4)
+{
+w('a5','n21');
+w('b5','n21');
+w('c5','n41');
+w('d7','n64');
+w('e7','n23');
+w('f5','n215');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am");
+}
+if (ia()==(6))
+{
+if (z==1)
+{
+w('a5','n2');
+w('b6','n2');
+w('c6','n2');
+w('d7','n6');
+w('e3','notex');
+w('f5','n2');
+}
+if (z==2)
+{
+w('a5','n25');
+w('b6','n2');
+w('c6','n2');
+w('d7','n65');
+w('e3','notex');
+w('f5','n25');
+}
+if (z==3)
+{
+w('a5','n215');
+w('b6','n23');
+w('c6','n22');
+w('d7','n645');
+w('e3','notex');
+w('f5','n215');
+}
+if (z==4)
+{
+w('a5','n21');
+w('b6','n23');
+w('c6','n22');
+w('d7','n64');
+w('e3','notex');
+w('f5','n21');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A+");
+}
+if (ia()==(7))
+{
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f6','n2');
+}
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f6','n2');
+}
+if (z==3)
+{
+w('a3','notex');
+w('b5','n21');
+w('c6','n23');
+w('d5','n61');
+w('e3','notex');
+w('f6','n22');
+}
+if (z==4)
+{
+w('a3','notex');
+w('b5','n21');
+w('c6','n23');
+w('d5','n61');
+w('e3','notex');
+w('f6','n22');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A07");
+}
+if (ia()==(8))
+{
+if (z==1)
+{
+w('a3','notex');
+w('b6','n2');
+w('c7','n4');
+w('d5','n6');
+w('e3','notex');
+w('f6','n2');
+}
+if (z==2)
+{
+w('a3','notex');
+w('b6','n2');
+w('c7','n4');
+w('d5','n6');
+w('e3','notex');
+w('f6','n2');
+}
+if (z==3)
+{
+w('a3','notex');
+w('b6','n23');
+w('c7','n44');
+w('d5','n61');
+w('e3','notex');
+w('f6','n22');
+}
+if (z==4)
+{
+w('a3','notex');
+w('b6','n23');
+w('c7','n44');
+w('d5','n61');
+w('e3','notex');
+w('f6','n22');
+}
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A6");
+
+}
+
+
+
+
+
+
+if (ia()==(9))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b7','n2');
+w('c6','n2');
+w('d7','n6');
+w('e7','n2');
+w('f3','notex');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b7','n2');
+w('c6','n2');
+w('d7','n65');
+w('e7','n2');
+w('f3','notex');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b7','n23');
+w('c6','n21');
+w('d7','n625');
+w('e7','n22');
+w('f3','notex');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b7','n23');
+w('c6','n21');
+w('d7','n62');
+w('e7','n22');
+w('f3','notex');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A6/9");
+
+}
+
+
+
+if (ia()==(10))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b7','n2');
+w('c5','n4');
+w('d7','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b7','n2');
+w('c5','n4');
+w('d7','n65');
+w('e3','notex');
+w('f5','n25');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b7','n23');
+w('c5','n41');
+w('d7','n625');
+w('e3','notex');
+w('f5','n215');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b7','n23');
+w('c5','n41');
+w('d7','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am6/9");
+
+}
+
+
+
+if (ia()==(11))
+{
+
+if (z==1)
+{
+w('a6','n2');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a6','n2');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a6','n23');
+w('b6','n23');
+w('c6','n23');
+w('d5','n61');
+w('e3','notex');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a6','n23');
+w('b6','n23');
+w('c6','n23');
+w('d5','n61');
+w('e3','notex');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am6");
+
+}
+
+
+
+
+
+if (ia()==(12))
+{
+
+if (z==1)
+{
+w('a5','n2');
+w('b8','n2');
+w('c6','n2');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a5','n25');
+w('b8','n2');
+w('c6','n2');
+w('d5','n6');
+w('e7','n2');
+w('f5','n25');
+}
+
+if (z==3)
+{
+w('a5','n215');
+w('b8','n24');
+w('c6','n22');
+w('d5','n61');
+w('e7','n23');
+w('f5','n215');
+}
+
+if (z==4)
+{
+w('a5','n21');
+w('b8','n24');
+w('c6','n22');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7");
+
+}
+
+
+
+if (ia()==(13))
+{
+
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c7','n4');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c7','n4');
+w('d5','n6');
+w('e7','n2');
+w('f5','n25');
+}
+
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c7','n44');
+w('d5','n61');
+w('e7','n23');
+w('f5','n215');
+}
+
+if (z==4)
+{
+w('a5','n21');
+w('b5','n21');
+w('c7','n44');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7 sus4");
+
+}
+
+
+
+if (ia()==(14))
+{
+
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c5','n4');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c5','n4');
+w('d5','n6');
+w('e7','n2');
+w('f5','n25');
+}
+
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c5','n41');
+w('d5','n61');
+w('e7','n23');
+w('f5','n215');
+}
+
+if (z==4)
+{
+w('a5','n21');
+w('b5','n21');
+w('c5','n41');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am7");
+
+}
+
+
+
+if (ia()==(15))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c6','n2');
+w('d6','n2');
+w('e3','notex');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c6','n2');
+w('d6','n25');
+w('e3','notex');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b5','n21');
+w('c6','n24');
+w('d6','n235');
+w('e3','notex');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b5','n21');
+w('c6','n24');
+w('d6','n23');
+w('e3','notex');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am7 flat5");
+
+}
+
+if (ia()==(16))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b6','n24');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b6','n24');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7#5");
+
+}
+
+
+if (ia()==(17))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c7','n4');
+w('d6','n2');
+w('e3','notex');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c7','n4');
+w('d6','n25');
+w('e3','notex');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b5','n21');
+w('c7','n44');
+w('d6','n235');
+w('e3','notex');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b5','n21');
+w('c7','n44');
+w('d6','n23');
+w('e3','notex');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7 flat5");
+
+}
+
+
+if (ia()==(18))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c6','n2');
+w('d6','n2');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c6','n2');
+w('d6','n25');
+w('e3','notex');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b5','n22');
+w('c6','n24');
+w('d6','n235');
+w('e3','notex');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b5','n22');
+w('c6','n24');
+w('d6','n23');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Amaj7");
+
+}
+
+
+
+if (ia()==(19))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c7','n4');
+w('d7','n6');
+w('e3','notex');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c7','n4');
+w('d7','n6');
+w('e3','notex');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b5','n21');
+w('c7','n44');
+w('d7','n63');
+w('e3','notex');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b5','n21');
+w('c7','n44');
+w('d7','n63');
+w('e3','notex');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Amaj7 flat5");
+
+}
+
+
+if (ia()==(20))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c5','n4');
+w('d6','n2');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c5','n4');
+w('d6','n25');
+w('e3','notex');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b5','n23');
+w('c5','n42');
+w('d6','n245');
+w('e3','notex');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b5','n23');
+w('c5','n42');
+w('d6','n24');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Ammaj7");
+
+}
+
+
+
+
+
+if (ia()==(21))
+{
+
+if (z==1)
+{
+w('a6','n2');
+w('b5','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a6','n2');
+w('b5','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a6','n23');
+w('b5','n21');
+w('c6','n22');
+w('d5','n61');
+w('e3','notex');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a6','n23');
+w('b5','n21');
+w('c6','n22');
+w('d5','n61');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7 flat9");
+
+}
+
+
+
+if (ia()==(22))
+{
+
+if (z==1)
+{
+w('a8','n2');
+w('b8','n2');
+w('c6','n2');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a8','n2');
+w('b8','n2');
+w('c6','n2');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a8','n24');
+w('b8','n24');
+w('c6','n22');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a8','n24');
+w('b8','n24');
+w('c6','n22');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7#9");
+
+}
+
+
+if (ia()==(23))
+{
+
+if (z==1)
+{
+w('a6','n2');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a6','n2');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a6','n23');
+w('b6','n23');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a6','n23');
+w('b6','n23');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A7#5");
+
+}
+
+
+
+
+if (ia()==(24))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b5','n2');
+w('c5','n4');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b5','n2');
+w('c5','n4');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b5','n21');
+w('c5','n41');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b5','n21');
+w('c5','n41');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am9");
+
+}
+
+
+
+if (ia()==(25))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b5','n2');
+w('c6','n2');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b5','n2');
+w('c6','n2');
+w('d5','n6');
+w('e7','n2');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b5','n21');
+w('c6','n22');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b5','n21');
+w('c6','n22');
+w('d5','n61');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A9");
+
+}
+
+
+
+
+if (ia()==(26))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b6','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b6','n23');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b6','n23');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A9#5");
+
+}
+
+
+
+
+if (ia()==(27))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b3','notex');
+w('c5','n4');
+w('d6','n2');
+w('e7','n2');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b3','notex');
+w('c5','n4');
+w('d6','n25');
+w('e7','n2');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b3','notex');
+w('c5','n41');
+w('d6','n235');
+w('e7','n24');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b3','notex');
+w('c5','n41');
+w('d6','n23');
+w('e7','n24');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A9 flat5");
+
+}
+
+
+
+if (ia()==(28))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b6','n2');
+w('c5','n4');
+w('d7','n6');
+w('e5','n2');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b6','n2');
+w('c5','n4');
+w('d7','n6');
+w('e5','n2');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b6','n23');
+w('c5','n41');
+w('d7','n64');
+w('e5','n21');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b6','n23');
+w('c5','n41');
+w('d7','n64');
+w('e5','n21');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Amaj9");
+
+}
+
+if (ia()==(29))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b5','n2');
+w('c5','n4');
+w('d6','n2');
+w('e5','n2');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b5','n2');
+w('c5','n4');
+w('d6','n25');
+w('e5','n2');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b5','n21');
+w('c5','n41');
+w('d6','n235');
+w('e5','n21');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b5','n21');
+w('c5','n41');
+w('d6','n23');
+w('e5','n21');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A9#11");
+
+}
+
+
+
+if (ia()==(30))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b5','n2');
+w('c5','n4');
+w('d6','n2');
+w('e7','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b5','n2');
+w('c5','n4');
+w('d6','n25');
+w('e7','n2');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b5','n21');
+w('c5','n41');
+w('d6','n225');
+w('e7','n23');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b5','n21');
+w('c5','n41');
+w('d6','n22');
+w('e7','n23');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am9maj7");
+
+}
+
+
+
+if (ia()==(31))
+{
+
+if (z==1)
+{
+w('a7','n2');
+w('b5','n2');
+w('c7','n4');
+w('d5','n6');
+w('e5','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a7','n2');
+w('b5','n2');
+w('c7','n4');
+w('d5','n6');
+w('e5','n2');
+w('f5','n2');
+}
+
+if (z==3)
+{
+w('a7','n24');
+w('b5','n21');
+w('c7','n43');
+w('d5','n61');
+w('e5','n21');
+w('f5','n21');
+}
+
+if (z==4)
+{
+w('a7','n24');
+w('b5','n21');
+w('c7','n43');
+w('d5','n61');
+w('e5','n21');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A11");
+
+}
+
+
+
+if (ia()==(32))
+{
+
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c5','n4');
+w('d5','n6');
+w('e5','n2');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c5','n4');
+w('d5','n6');
+w('e5','n2');
+w('f5','n25');
+}
+
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c5','n41');
+w('d5','n61');
+w('e5','n21');
+w('f5','n215');
+}
+
+if (z==4)
+{
+w('a5','n21');
+w('b5','n21');
+w('c5','n41');
+w('d5','n61');
+w('e5','n21');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("Am11");
+
+}
+
+
+
+if (ia()==(33))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b7','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b7','n2');
+w('c6','n2');
+w('d5','n6');
+w('e3','notex');
+w('f5','n25');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b7','n24');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n215');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b7','n24');
+w('c6','n23');
+w('d5','n62');
+w('e3','notex');
+w('f5','n21');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A13");
+
+}
+
+
+
+if (ia()==(34))
+{
+
+if (z==1)
+{
+w('a5','n2');
+w('b5','n2');
+w('c6','n2');
+w('d7','n6');
+w('e3','notex');
+w('f7','n2');
+}
+
+
+if (z==2)
+{
+w('a5','n25');
+w('b5','n2');
+w('c6','n2');
+w('d7','n6');
+w('e3','notex');
+w('f7','n2');
+}
+
+if (z==3)
+{
+w('a5','n215');
+w('b5','n21');
+w('c6','n22');
+w('d7','n64');
+w('e3','notex');
+w('f7','n23');
+}
+
+if (z==4)
+{
+w('a5','n215');
+w('b5','n21');
+w('c6','n22');
+w('d7','n64');
+w('e3','notex');
+w('f7','n23');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A13 flat9");
+
+}
+
+
+
+
+if (ia()==(35))
+{
+
+if (z==1)
+{
+w('a3','notex');
+w('b7','n2');
+w('c6','n2');
+w('d5','n6');
+w('e6','n2');
+w('f6','n2');
+}
+
+
+if (z==2)
+{
+w('a3','notex');
+w('b7','n2');
+w('c6','n2');
+w('d5','n6');
+w('e6','n2');
+w('f6','n2');
+}
+
+if (z==3)
+{
+w('a3','notex');
+w('b7','n24');
+w('c6','n23');
+w('d5','n61');
+w('e6','n22');
+w('f6','n22');
+}
+
+if (z==4)
+{
+w('a3','notex');
+w('b7','n24');
+w('c6','n23');
+w('d5','n61');
+w('e6','n22');
+w('f6','n22');
+}
+
+document.guitar.textareaone.value=("");
+document.guitar.textareatwo.value=("A13 flat5 flat9");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function d(form)
+{
+
+if (id()==(0))
+{
+
+if (z==1)
+{
+w('a3','n7');
+w('b5','n2');
+w('c3','n7');
+w('d6','n2');
+w('e7','n2');
+}
+
+
+if (z==2)
+{
+w('a3','n7');
+w('b5','n25');
+w('c3','n7');
+w('d6','n2');
+w('e7','n25');
+}
+
+if (z==3)
+{
+w('a3','n7');
+w('b5','n215');
+w('c3','n7');
+w('d6','n22');
+w('e7','n235');
+}
+
+if (z==4)
+{
+w('a3','n7');
+w('b5','n21');
+w('c3','n7');
+w('d6','n22');
+w('e7','n23');
+}
+
+document.guitar.textareaone.value=("C");
+document.guitar.textareatwo.value=("C,E,G,C,E");
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+// -->
+
+</script>
+
+
+
+<body>
+<basefont face="arial" size="3">
+<div align="center">
+	<table border="0" width="100%" cellspacing="5" cellpadding="5">
+		<tr>
+			<td>
+
+&nbsp;</td>
+			<td>
+
+<h1 align="center"><font face="Arial">Javascript Guitar</font></h1></td>
+			<td>
+
+&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="140" valign="top" align="left">
+			<!--webbot bot="Include" U-Include="../includes/left_nav.html" TAG="BODY" startspan -->
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size=3>Site Navigation</font></b></nobr>
+</td></tr><tr><td>
+<font size="2">
+<nobr><a href="../index.html"><font face="Arial" size=2>Home</font></a></nobr>
+</font>&nbsp;</td></tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../music.html"><font face="Arial" size=2>Music Stuff</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../photos.html"><font face="Arial" size=2>Photos</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../retro-computing.html"><font face="Arial" size=2>Retro Computing</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../TwistyPuzzles.html"><font face="Arial" size=2>Twisty Puzzles</font></a></nobr>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<b><font face="Arial" size="3">IT Stuff</font></b></td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../consulting.html">IT Consulting</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size="2"><a href="../projects/index.html">IT Projects Home</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../education-certification.html">Education and Certs</a></font></nobr></td></tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size="3">Javascript Guitar</font></b></nobr>
+</td></tr><tr><td>
+<nobr><a href="index.html"><font face="Arial" size="2">Note Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="barrechords.html"><font face="Arial" size="2">Barre Chord Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="chordsminmaj.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="scales.html"><font face="Arial" size="2">Scales</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chordsbig.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="b_chords.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chords.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr>
+</table>
+<br>
+<br>
+<!--webbot bot="Include" i-checksum="56706" endspan --><p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</td>
+			<td valign="top">
+			<h2 align="center"><font face="Arial">A Chords</font></h2>
+			
+			
+			
+			
+<form name="guitar">
+<input type=hidden name="notes">
+
+
+
+			<p align="center">
+
+
+
+<nobr><img name="a0" src="images/note8.gif" border=0><img name="a1" src="images/note1.gif" border=0><img name="a2" src="images/note1.gif" border=0><img name="a3" src="images/note1.gif" border=0><img name="a4" src="images/note1.gif" border=0><img name="a5" src="images/note1.gif" border=0><img name="a6" src="images/note1.gif" border=0><img name="a7" src="images/note1.gif" border=0><img name="a8" src="images/note1.gif" border=0><img name="a9" src="images/note1.gif" border=0><img name="a10" src="images/note1.gif" border=0><img name="a11" src="images/note1.gif" border=0><img name="a12" src="images/note3.gif" border=0><img name="a13" src="images/note1.gif" border=0><img name="a14" src="images/note1.gif" border=0><img name="a15" src="images/note1.gif" border=0><img name="a16" src="images/note1.gif" border=0><img name="a17" src="images/note1.gif" border=0><img name="a18" src="images/note1.gif" border=0><img name="a19" src="images/note1.gif" border=0><img name="a20" src="images/note1.gif" border=0><img name="a21" src="images/note1.gif" border=0><img name="a22" src="images/note1.gif" border=0><br><img name="b0" src="images/note8.gif" border=0><img name="b1" src="images/note1.gif" border=0><img name="b2" src="images/note1.gif" border=0><img name="b3" src="images/note1.gif" border=0><img name="b4" src="images/note1.gif" border=0><img name="b5" src="images/note1.gif" border=0><img name="b6" src="images/note1.gif" border=0><img name="b7" src="images/note1.gif" border=0><img name="b8" src="images/note1.gif" border=0><img name="b9" src="images/note1.gif" border=0><img name="b10" src="images/note1.gif" border=0><img name="b11" src="images/note1.gif" border=0><img name="b12" src="images/note5.gif" border=0><img name="b13" src="images/note1.gif" border=0><img name="b14" src="images/note1.gif" border=0><img name="b15" src="images/note1.gif" border=0><img name="b16" src="images/note1.gif" border=0><img name="b17" src="images/note1.gif" border=0><img name="b18" src="images/note1.gif" border=0><img name="b19" src="images/note1.gif" border=0><img name="b20" src="images/note1.gif" border=0><img name="b21" src="images/note1.gif" border=0><img name="b22" src="images/note1.gif" border=0><br><img name="c0" src="images/note8.gif" border=0><img name="c1" src="images/note1.gif" border=0><img name="c2" src="images/note1.gif" border=0><img name="c3" src="images/note3.gif" border=0><img name="c4" src="images/note1.gif" border=0><img name="c5" src="images/note3.gif" border=0><img name="c6" src="images/note1.gif" border=0><img name="c7" src="images/note3.gif" border=0><img name="c8" src="images/note1.gif" border=0><img name="c9" src="images/note3.gif" border=0><img name="c10" src="images/note1.gif" border=0><img name="c11" src="images/note1.gif" border=0><img name="c12" src="images/note1.gif" border=0><img name="c13" src="images/note1.gif" border=0><img name="c14" src="images/note1.gif" border=0><img name="c15" src="images/note3.gif" border=0><img name="c16" src="images/note1.gif" border=0><img name="c17" src="images/note3.gif" border=0><img name="c18" src="images/note1.gif" border=0><img name="c19" src="images/note3.gif" border=0><img name="c20" src="images/note1.gif" border=0><img name="c21" src="images/note3.gif" border=0><img name="c22" src="images/note1.gif" border=0><br><img name="d0" src="images/note8.gif" border=0><img name="d1" src="images/note1.gif" border=0><img name="d2" src="images/note1.gif" border=0><img name="d3" src="images/note5.gif" border=0><img name="d4" src="images/note1.gif" border=0><img name="d5" src="images/note5.gif" border=0><img name="d6" src="images/note1.gif" border=0><img name="d7" src="images/note5.gif" border=0><img name="d8" src="images/note1.gif" border=0><img name="d9" src="images/note5.gif" border=0><img name="d10" src="images/note1.gif" border=0><img name="d11" src="images/note1.gif" border=0><img name="d12" src="images/note1.gif" border=0><img name="d13" src="images/note1.gif" border=0><img name="d14" src="images/note1.gif" border=0><img name="d15" src="images/note5.gif" border=0><img name="d16" src="images/note1.gif" border=0><img name="d17" src="images/note5.gif" border=0><img name="d18" src="images/note1.gif" border=0><img name="d19" src="images/note5.gif" border=0><img name="d20" src="images/note1.gif" border=0><img name="d21" src="images/note5.gif" border=0><img name="d22" src="images/note1.gif" border=0><br><img name="e0" src="images/note8.gif" border=0><img name="e1" src="images/note1.gif" border=0><img name="e2" src="images/note1.gif" border=0><img name="e3" src="images/note1.gif" border=0><img name="e4" src="images/note1.gif" border=0><img name="e5" src="images/note1.gif" border=0><img name="e6" src="images/note1.gif" border=0><img name="e7" src="images/note1.gif" border=0><img name="e8" src="images/note1.gif" border=0><img name="e9" src="images/note1.gif" border=0><img name="e10" src="images/note1.gif" border=0><img name="e11" src="images/note1.gif" border=0><img name="e12" src="images/note3.gif" border=0><img name="e13" src="images/note1.gif" border=0><img name="e14" src="images/note1.gif" border=0><img name="e15" src="images/note1.gif" border=0><img name="e16" src="images/note1.gif" border=0><img name="e17" src="images/note1.gif" border=0><img name="e18" src="images/note1.gif" border=0><img name="e19" src="images/note1.gif" border=0><img name="e20" src="images/note1.gif" border=0><img name="e21" src="images/note1.gif" border=0><img name="e22" src="images/note1.gif" border=0><br><img name="f0" src="images/note8.gif" border=0><img name="f1" src="images/note1.gif" border=0><img name="f2" src="images/note1.gif" border=0><img name="f3" src="images/note1.gif" border=0><img name="f4" src="images/note1.gif" border=0><img name="f5" src="images/note1.gif" border=0><img name="f6" src="images/note1.gif" border=0><img name="f7" src="images/note1.gif" border=0><img name="f8" src="images/note1.gif" border=0><img name="f9" src="images/note1.gif" border=0><img name="f10" src="images/note1.gif" border=0><img name="f11" src="images/note1.gif" border=0><img name="f12" src="images/note5.gif" border=0><img name="f13" src="images/note1.gif" border=0><img name="f14" src="images/note1.gif" border=0><img name="f15" src="images/note1.gif" border=0><img name="f16" src="images/note1.gif" border=0><img name="f17" src="images/note1.gif" border=0><img name="f18" src="images/note1.gif" border=0><img name="f19" src="images/note1.gif" border=0><img name="f20" src="images/note1.gif" border=0><img name="f21" src="images/note1.gif" border=0><img name="f22" src="images/note1.gif" border=0><br>
+			<br></nobr></p>
+			<div align="center">
+
+
+<table border=7 cellspacing=0 cellpadding=2>
+
+
+
+<tr>
+
+
+
+
+<td colspan=2 align=center> 
+<input type="textarea" size=27 name="textareatwo">
+</td>
+
+
+<td rowspan=4>
+<select name="achord" onFocus="document.guitar.reset(); resetme();">
+<option>A
+<option>Asus4
+<option>A(flat 5)
+<option>A add9
+<option>A5
+<option>Am
+<option>A+
+<option>A<sup>O</sup>7
+<option>A6
+<option>A6/9
+<option>Am6/9
+<option>Am6
+<option>A7
+<option>A7 sus4
+<option>Am7
+<option>Am7 flat5
+<option>A7#5
+<option>A7 flat5
+<option>A maj7
+<option>A maj7 flat5
+<option>Ammaj7
+<option>A7 flat9
+<option>A7#9
+<option>A7#5flat9
+<option>Am9
+<option>A9
+<option>A9#5
+<option>A9 flat5
+<option>Amaj9
+<option>A9#11
+<option>Am9maj7
+<option>A11
+<option>Am11
+<option>A13
+<option>A13flat9
+<option>A13flat9flat5
+<option selected>A Chords
+</select>
+
+
+<br>
+
+<select name="dchord" onFocus="document.guitar.reset(); resetme();">
+<option>
+<option>
+<option>
+<option>
+<option>
+<option>
+<option>
+<option selected>D Chords
+</select>
+
+
+</td>
+
+
+</tr>
+
+
+<tr>
+<td>
+
+The Root note is:&nbsp;
+<input type="textarea" size=2 name="textareaone">
+</td>
+
+<td>
+<input type=reset onClick="resetme()">
+</td>
+
+</tr>
+
+
+
+</form>
+
+
+<form name="form6">
+
+
+<td colspan=2 align="right">
+Root Note?
+Red<input type="radio" name="yes" onClick="c=1">
+Black<input type="radio" name="yes" onClick="c=2">
+
+</td>
+
+</tr>
+
+
+<tr>
+<td colspan=2 align="right">
+Fingerings?
+Show<input type="radio" name="root" onClick="f=1">
+Hide<input type="radio" name="root" onClick="f=2">
+
+</td>
+
+</tr>
+</table>
+
+			</div>
+			<p align="center">
+
+<input type=button value="Make it So" onClick="doit(this.form);">
+
+</form>			
+			
+			
+			
+			
+			
+			
+			
+			</td>
+			<td width="15%" valign="top">
+			<!--webbot bot="Include" U-Include="../includes/right_nav.html" TAG="BODY" startspan -->
+
+
+	
+<img border="0" src="../images/Steve.jpg" width="187" height="180"><br>
+
+<table border="0" cellspacing="5" cellpadding="0">
+<tr>
+<td><font face="Arial" size=2>Website</font></td>
+<td><a target="_blank" href="https://steve.lovestoblog.com/"><font face="Arial" size=2>steve.lovestoblog.com</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Facebook</font></td>
+<td><a target="_blank" href="https://www.facebook.com/stephen.pleasants"><font face="Arial" size=2>stephen.pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>LinkedIn</font></td>
+<td><a target="_blank" href="https://www.linkedin.com/in/stephen-pleasants/"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>UpWork</font></td>
+<td><a target="_blank" href="https://www.upwork.com/freelancers/~017c1e57f0e4023e07"><font face="Arial" size=2>Stephen P.</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Reddit</font></td>
+<td><a target="_blank" href="https://www.reddit.com/user/SoylentAquaMarine/"><font face="Arial" size=2>u/SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>GitHub</font></td>
+<td><a target="_blank" href="https://github.com/SoylentAquamarine"><font face="Arial" size=2>SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>YouTube</font></td>
+<td><a target="_blank" href="https://www.youtube.com/channel/UCjzmo4L1m2vle9DffKOfpzw"><font face="Arial" size=2>@StephenPleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Credly</font></td>
+<td><a target="_blank" href="https://www.credly.com/users/stephen-pleasants"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Contact</font></td>
+<td><a href="mailto:stephen.pleasants@gmail.com?subject=from steve.lovestoblog.com"><font face="Arial" size=2>email me</font></a></td>
+</tr>
+</table>
+
+
+<!--webbot bot="Include" i-checksum="19559" endspan -->&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			&nbsp;</td>
+			<td>
+			<!--webbot bot="Include" U-Include="../includes/footer.html" TAG="BODY" startspan -->
+<basefont face="arial" size="3">
+<div align="center">
+	&nbsp;</div>
+<div align="center">
+	<font size="2"><i>Copyright &copy; 
+	1996-2026 Stephen Pleasants</i></div>
+<div align="center">
+	<i>All rights reserved</i></font></div>
+
+<!--webbot bot="Include" i-checksum="37816" endspan --></td>
+			<td>
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>
