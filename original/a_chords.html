@@ -1,0 +1,1922 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Javascript Guitar">
+
+<title>Javascript Guitar - A Chords - Vertical</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest"></head>
+
+
+<script language="javascript">
+<!--
+var f=1
+var k=1
+n1 = new Image(13,31);
+n1.src = "a_note1.gif";
+n2 = new Image(13,31);
+n2.src = "a_note2.gif";
+n3 = new Image(13,31);
+n3.src = "a_note3.gif";
+n4 = new Image(13,31);
+n4.src = "a_note4.gif";
+n5 = new Image(13,31);
+n5.src = "a_note5.gif";
+n6 = new Image(13,31);
+n6.src = "a_note6.gif";
+n7 = new Image(13,31);
+n7.src = "a_note7.gif";
+n8 = new Image(13,31);
+n8.src = "a_note8.gif";
+n25 = new Image(13,31);
+n25.src = "a_note25.gif";
+n45 = new Image(13,31);
+n45.src = "a_note45.gif";
+n65 = new Image(13,31);
+n65.src = "a_note65.gif";
+n75 = new Image(13,31);
+n75.src = "a_note75.gif";
+n21 = new Image(13,31);
+n21.src = "a_note21.gif";
+n41 = new Image(13,31);
+n41.src = "a_note41.gif";
+n61 = new Image(13,31);
+n61.src = "a_note61.gif";
+n71 = new Image(13,31);
+n71.src = "a_note71.gif";
+n215 = new Image(13,31);
+n215.src = "a_note215.gif";
+n415 = new Image(13,31);
+n415.src = "a_note415.gif";
+n615 = new Image(13,31);
+n615.src = "a_note615.gif";
+n715 = new Image(13,31);
+n715.src = "a_note715.gif";
+n22 = new Image(13,31);
+n22.src = "a_note22.gif";
+n42 = new Image(13,31);
+n42.src = "a_note42.gif";
+n62 = new Image(13,31);
+n62.src = "a_note62.gif";
+n72 = new Image(13,31);
+n72.src = "a_note72.gif";
+n225 = new Image(13,31);
+n225.src = "a_note225.gif";
+n425 = new Image(13,31);
+n425.src = "a_note425.gif";
+n625 = new Image(13,31);
+n625.src = "a_note625.gif";
+n725 = new Image(13,31);
+n725.src = "a_note725.gif";
+n23 = new Image(13,31);
+n23.src = "a_note23.gif";
+n43 = new Image(13,31);
+n43.src = "a_note43.gif";
+n63 = new Image(13,31);
+n63.src = "a_note63.gif";
+n73 = new Image(13,31);
+n73.src = "a_note73.gif";
+n235 = new Image(13,31);
+n235.src = "a_note235.gif";
+n435 = new Image(13,31);
+n435.src = "a_note435.gif";
+n635 = new Image(13,31);
+n635.src = "a_note635.gif";
+n735 = new Image(13,31);
+n735.src = "a_note735.gif";
+n24 = new Image(13,31);
+n24.src = "a_note24.gif";
+n44 = new Image(13,31);
+n44.src = "a_note44.gif";
+n64 = new Image(13,31);
+n64.src = "a_note64.gif";
+n74 = new Image(13,31);
+n74.src = "a_note74.gif";
+n245 = new Image(13,31);
+n245.src = "a_note245.gif";
+n445 = new Image(13,31);
+n445.src = "a_note445.gif";
+n645 = new Image(13,31);
+n645.src = "a_note645.gif";
+n745 = new Image(13,31);
+n745.src = "a_note745.gif";
+notex = new Image(13,31);
+notex.src = "a_note1x.gif";
+function w(imgDocID,imgObjName) 
+{
+document.images[imgDocID].src = eval(imgObjName + ".src")
+}
+function doit()
+{
+if (k==1 && f==1)
+{
+sc=3;
+processa(this.form);
+}
+if (k==2 && f==2)
+{
+sc=1;
+processa(this.form);
+}
+if (k==1 && f==2)
+{
+sc=2;
+processa(this.form);
+}
+if (k==2 && f==1)
+{
+sc=4;
+processa(this.form);
+}
+}
+function r()
+{
+w('a_a','n1');
+w('a_b','n1');
+w('a_c','n1');
+w('a_d','n1');
+w('a_e','n1');
+w('b_a','n1');
+w('b_b','n1');
+w('b_c','n1');
+w('b_d','n1');
+w('b_e','n1');
+w('c_a','n1');
+w('c_b','n3');
+w('c_c','n1');
+w('c_d','n3');
+w('c_e','n1');
+w('d_a','n1');
+w('d_b','n5');
+w('d_c','n1');
+w('d_d','n5');
+w('d_e','n1');
+w('e_a','n1');
+w('e_b','n1');
+w('e_c','n1');
+w('e_d','n1');
+w('e_e','n1');
+w('f_a','n1');
+w('f_b','n1');
+w('f_c','n1');
+w('f_d','n1');
+w('f_e','n1');
+}
+function h() 
+{   
+return document.guitar.achord.selectedIndex
+}
+function k() 
+{
+return document.guitar.dchord.selectedIndex
+}
+function processa(form)
+{
+if (h()==(0))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_d','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_c','n2');
+w('d_d','n65');
+w('e_d','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_c','n22');
+w('d_d','n645');
+w('e_d','n23');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_b','n21');
+w('c_c','n22');
+w('d_d','n64');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A");
+}
+if (h()==(1))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_d','n4');
+w('d_d','n6');
+w('e_b','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_d','n4');
+w('d_d','n65');
+w('e_b','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_d','n44');
+w('d_d','n635');
+w('e_b','n21');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_b','n21');
+w('c_d','n44');
+w('d_d','n63');
+w('e_b','n21');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A sus4");
+}
+if (h()==(2))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_d','n4');
+w('d_e','n2');
+w('d_f','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_d','n45');
+w('d_e','n2');
+w('d_f','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_d','n435');
+w('d_e','n24');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_d','n43');
+w('d_e','n24');
+w('d_f','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A flat5");
+}
+if (h()==(3))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_d','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_d','n65');
+w('e_a','notex');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_c','n22');
+w('d_d','n635');
+w('e_a','notex');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_c','n22');
+w('d_d','n63');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A add9");
+}
+if (h()==(4))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_a','notex');
+w('d_d','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_a','notex');
+w('d_d','n65');
+w('e_d','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_a','notex');
+w('d_d','n645');
+w('e_d','n23');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_a','notex');
+w('d_d','n64');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A 5");
+}
+if (h()==(5))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_d','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_b','n4');
+w('d_d','n65');
+w('e_d','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_b','n41');
+w('d_d','n645');
+w('e_d','n23');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_b','n21');
+w('c_b','n41');
+w('d_d','n64');
+w('e_d','n23');
+w('f_b','n215');
+}
+
+document.guitar.o.value=("");
+document.guitar.t.value=("Am");
+}
+if (h()==(6))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_d','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_c','n2');
+w('c_c','n2');
+w('d_d','n65');
+w('e_a','notex');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_c','n23');
+w('c_c','n22');
+w('d_d','n645');
+w('e_a','notex');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_c','n23');
+w('c_c','n22');
+w('d_d','n64');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A+");
+}
+if (h()==(7))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_c','n23');
+w('d_b','n61');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_c','n23');
+w('d_b','n61');
+w('e_a','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A07");
+}
+if (h()==(8))
+{
+
+if (sc==1)
+{
+w('a_a','notex');
+w('b_c','n2');
+w('c_d','n4');
+w('d_b','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_c','n2');
+w('c_d','n4');
+w('d_b','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_c','n23');
+w('c_d','n44');
+w('d_b','n61');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_c','n23');
+w('c_d','n44');
+w('d_b','n61');
+w('e_a','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A6");
+}
+if (h()==(9))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_d','n2');
+w('c_c','n2');
+w('d_d','n6');
+w('e_d','n2');
+w('f_a','notex');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_d','n2');
+w('c_c','n2');
+w('d_d','n65');
+w('e_d','n2');
+w('f_a','notex');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_d','n23');
+w('c_c','n21');
+w('d_d','n625');
+w('e_d','n22');
+w('f_a','notex');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_d','n23');
+w('c_c','n21');
+w('d_d','n62');
+w('e_d','n22');
+w('f_a','notex');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A6/9");
+}
+if (h()==(10))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_d','n2');
+w('c_b','n4');
+w('d_d','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_d','n2');
+w('c_b','n4');
+w('d_d','n65');
+w('e_a','notex');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_d','n23');
+w('c_b','n41');
+w('d_d','n625');
+w('e_a','notex');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_d','n23');
+w('c_b','n41');
+w('d_d','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am6/9");
+}
+if (h()==(11))
+{
+if (sc==1)
+{
+w('a_c','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_c','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_c','n23');
+w('b_c','n23');
+w('c_c','n23');
+w('d_b','n61');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_c','n23');
+w('b_c','n23');
+w('c_c','n23');
+w('d_b','n61');
+w('e_a','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am6");
+}
+if (h()==(12))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_e','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_e','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_e','n24');
+w('c_c','n22');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_e','n24');
+w('c_c','n22');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7");
+
+}
+if (h()==(13))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_d','n4');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_d','n4');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_d','n44');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_b','n21');
+w('c_d','n44');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7 sus4");
+}
+if (h()==(14))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_b','n4');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_b','n41');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_b','n21');
+w('c_b','n41');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am7");
+}
+if (h()==(15))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_c','n2');
+w('d_c','n2');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_c','n2');
+w('d_c','n25');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_c','n24');
+w('d_c','n235');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_c','n24');
+w('d_c','n23');
+w('e_a','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am7 flat5");
+}
+if (h()==(16))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_c','n24');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_c','n24');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7#5");
+}
+if (h()==(17))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_d','n4');
+w('d_c','n2');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_d','n4');
+w('d_c','n25');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_d','n44');
+w('d_c','n235');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_d','n44');
+w('d_c','n23');
+w('e_a','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7 flat5");
+}
+if (h()==(18))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_c','n2');
+w('d_c','n2');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_c','n2');
+w('d_c','n25');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n22');
+w('c_c','n24');
+w('d_c','n235');
+w('e_a','notex');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n22');
+w('c_c','n24');
+w('d_c','n23');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Amaj7");
+}
+if (h()==(19))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_d','n4');
+w('d_d','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_d','n4');
+w('d_d','n6');
+w('e_a','notex');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_d','n44');
+w('d_d','n63');
+w('e_a','notex');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_d','n44');
+w('d_d','n63');
+w('e_a','notex');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Amaj7 flat5");
+}
+if (h()==(20))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_b','n4');
+w('d_c','n2');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_b','n4');
+w('d_c','n25');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n23');
+w('c_b','n42');
+w('d_c','n245');
+w('e_a','notex');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n23');
+w('c_b','n42');
+w('d_c','n24');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Ammaj7");
+}
+if (h()==(21))
+{
+if (sc==1)
+{
+w('a_c','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_c','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_c','n23');
+w('b_b','n21');
+w('c_c','n22');
+w('d_b','n61');
+w('e_a','notex');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_c','n23');
+w('b_b','n21');
+w('c_c','n22');
+w('d_b','n61');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7 flat9");
+}
+if (h()==(22))
+{
+if (sc==1)
+{
+w('a_e','n2');
+w('b_e','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_e','n2');
+w('b_e','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_e','n24');
+w('b_e','n24');
+w('c_c','n22');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_e','n24');
+w('b_e','n24');
+w('c_c','n22');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7#9");
+}
+if (h()==(23))
+{
+if (sc==1)
+{
+w('a_c','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_c','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_c','n23');
+w('b_c','n23');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_c','n23');
+w('b_c','n23');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A7#5");
+}
+if (h()==(24))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_b','n41');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_b','n41');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am9");
+}
+if (h()==(25))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_c','n22');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_c','n22');
+w('d_b','n61');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A9");
+}
+if (h()==(26))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_c','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_c','n23');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_c','n23');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A9#5");
+}
+if (h()==(27))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_b','n4');
+w('d_c','n2');
+w('e_d','n2');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_b','n4');
+w('d_c','n25');
+w('e_d','n2');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_b','n41');
+w('d_c','n235');
+w('e_d','n24');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_a','notex');
+w('c_b','n41');
+w('d_c','n23');
+w('e_d','n24');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A9 flat5");
+}
+if (h()==(28))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_c','n2');
+w('c_b','n4');
+w('d_d','n6');
+w('e_b','n2');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_c','n2');
+w('c_b','n4');
+w('d_d','n6');
+w('e_b','n2');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_c','n23');
+w('c_b','n41');
+w('d_d','n64');
+w('e_b','n21');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_c','n23');
+w('c_b','n41');
+w('d_d','n64');
+w('e_b','n21');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Amaj9");
+}
+if (h()==(29))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_b','n4');
+w('d_c','n2');
+w('e_b','n2');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_b','n2');
+w('c_b','n4');
+w('d_c','n25');
+w('e_b','n2');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_b','n41');
+w('d_c','n235');
+w('e_b','n21');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_b','n21');
+w('c_b','n41');
+w('d_c','n23');
+w('e_b','n21');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A9#11");
+}
+if (h()==(30))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_c','n2');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_c','n25');
+w('e_d','n2');
+w('f_b','n2');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_b','n41');
+w('d_c','n225');
+w('e_d','n23');
+w('f_b','n21');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_b','n41');
+w('d_c','n22');
+w('e_d','n23');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am9maj7");
+}
+if (h()==(31))
+{
+if (sc==1)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_d','n4');
+w('d_b','n6');
+w('e_b','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_d','n2');
+w('b_b','n2');
+w('c_d','n4');
+w('d_b','n6');
+w('e_b','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_d','n43');
+w('d_b','n61');
+w('e_b','n21');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_d','n24');
+w('b_b','n21');
+w('c_d','n43');
+w('d_b','n61');
+w('e_b','n21');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A11");
+}
+if (h()==(32))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_b','n4');
+w('d_b','n6');
+w('e_b','n2');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_b','n4');
+w('d_b','n6');
+w('e_b','n2');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_b','n41');
+w('d_b','n61');
+w('e_b','n21');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_b','n21');
+w('b_b','n21');
+w('c_b','n41');
+w('d_b','n61');
+w('e_b','n21');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("Am11");
+}
+if (h()==(33))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_d','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_d','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_a','notex');
+w('f_b','n25');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_d','n24');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n215');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_d','n24');
+w('c_c','n23');
+w('d_b','n62');
+w('e_a','notex');
+w('f_b','n21');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A13");
+}
+if (h()==(34))
+{
+if (sc==1)
+{
+w('a_b','n2');
+w('b_b','n2');
+w('c_c','n2');
+w('d_d','n6');
+w('e_a','notex');
+w('f_d','n2');
+}
+if (sc==2)
+{
+w('a_b','n25');
+w('b_b','n2');
+w('c_c','n2');
+w('d_d','n6');
+w('e_a','notex');
+w('f_d','n2');
+}
+if (sc==3)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_c','n22');
+w('d_d','n64');
+w('e_a','notex');
+w('f_d','n23');
+}
+if (sc==4)
+{
+w('a_b','n215');
+w('b_b','n21');
+w('c_c','n22');
+w('d_d','n64');
+w('e_a','notex');
+w('f_d','n23');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A13 flat9");
+}
+if (h()==(35))
+{
+if (sc==1)
+{
+w('a_a','notex');
+w('b_d','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_c','n2');
+w('f_c','n2');
+}
+if (sc==2)
+{
+w('a_a','notex');
+w('b_d','n2');
+w('c_c','n2');
+w('d_b','n6');
+w('e_c','n2');
+w('f_c','n2');
+}
+if (sc==3)
+{
+w('a_a','notex');
+w('b_d','n24');
+w('c_c','n23');
+w('d_b','n61');
+w('e_c','n22');
+w('f_c','n22');
+}
+if (sc==4)
+{
+w('a_a','notex');
+w('b_d','n24');
+w('c_c','n23');
+w('d_b','n61');
+w('e_c','n22');
+w('f_c','n22');
+}
+document.guitar.o.value=("");
+document.guitar.t.value=("A13 flat5 flat9");
+}
+}
+// -->
+</script>
+
+
+
+<body onLoad="r()">
+<basefont face="arial" size="3">
+<div align="center">
+	<table border="0" width="100%" cellspacing="5" cellpadding="5">
+		<tr>
+			<td>
+
+&nbsp;</td>
+			<td>
+
+<h1 align="center"><font face="Arial">Javascript Guitar</font></h1></td>
+			<td>
+
+&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="140" valign="top" align="left">
+			<!--webbot bot="Include" U-Include="../includes/left_nav.html" TAG="BODY" startspan -->
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size=3>Site Navigation</font></b></nobr>
+</td></tr><tr><td>
+<font size="2">
+<nobr><a href="../index.html"><font face="Arial" size=2>Home</font></a></nobr>
+</font>&nbsp;</td></tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../music.html"><font face="Arial" size=2>Music Stuff</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<font size="2">
+<nobr><a href="../photos.html"><font face="Arial" size=2>Photos</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../retro-computing.html"><font face="Arial" size=2>Retro Computing</font></a></nobr>
+</td>
+</tr>
+<tr>
+	<td>
+<nobr><a href="../TwistyPuzzles.html"><font face="Arial" size=2>Twisty Puzzles</font></a></nobr>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<b><font face="Arial" size="3">IT Stuff</font></b></td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../consulting.html">IT Consulting</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size="2"><a href="../projects/index.html">IT Projects Home</a></font></nobr>
+</td></tr><tr><td>
+<nobr><font face="Arial" size=2><a href="../education-certification.html">Education and Certs</a></font></nobr></td></tr>
+</table>
+<table border="0" cellspacing="5" cellpadding="0">
+<tr><td>
+<nobr><b><font face="Arial" size="3">Javascript Guitar</font></b></nobr>
+</td></tr><tr><td>
+<nobr><a href="index.html"><font face="Arial" size="2">Note Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="barrechords.html"><font face="Arial" size="2">Barre Chord Builder</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="chordsminmaj.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="scales.html"><font face="Arial" size="2">Scales</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chordsbig.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="b_chords.html"><font face="Arial" size="2">Misc Chords</font></a></nobr>
+</td></tr><tr><td>
+<nobr><a href="a_chords.html"><font face="Arial" size="2">Variations on A and D</font></a></nobr>
+</td></tr>
+</table>
+<br>
+<br>
+<!--webbot bot="Include" i-checksum="56706" endspan --><p>&nbsp;</p>
+			<p>&nbsp;</td>
+			<td valign="top">
+			<h2 align="center"><font face="Arial">A Chords</font></h2>
+			
+			
+			
+			<form name="guitar">
+<input type=hidden name="notes">
+			<div align="center">
+<table border=7 cellspacing=0 cellpadding=2>
+<tr>
+<td rowspan=4>
+<nobr><img name="f_a" src="images/a_note1.gif" width=13 height=31 border=0><img name="e_a" src="images/a_note1.gif" width=13 height=31 border=0><img name="d_a" src="images/a_note1.gif" width=13 height=31 border=0><img name="c_a" src="images/a_note1.gif" width=13 height=31 border=0><img name="b_a" src="images/a_note1.gif" width=13 height=31 border=0><img name="a_a" src="images/a_note1.gif" width=13 height=31 border=0><br><img name="f_b" src="images/a_note1.gif" width=13 height=31 border=0><img name="e_b" src="images/a_note1.gif" width=13 height=31 border=0><img name="d_b" src="images/a_note5.gif" width=13 height=31 border=0><img name="c_b" src="images/a_note3.gif" width=13 height=31 border=0><img name="b_b" src="images/a_note1.gif" width=13 height=31 border=0><img name="a_b" src="images/a_note1.gif" width=13 height=31 border=0><br><img name="f_c" src="images/a_note1.gif" width=13 height=31 border=0><img name="e_c" src="images/a_note1.gif" width=13 height=31 border=0><img name="d_c" src="images/a_note1.gif" width=13 height=31 border=0><img name="c_c" src="images/a_note1.gif" width=13 height=31 border=0><img name="b_c" src="images/a_note1.gif" width=13 height=31 border=0><img name="a_c" src="images/a_note1.gif" width=13 height=31 border=0><br><img name="f_d" src="images/a_note1.gif" width=13 height=31 border=0><img name="e_d" src="images/a_note1.gif" width=13 height=31 border=0><img name="d_d" src="images/a_note5.gif" width=13 height=31 border=0><img name="c_d" src="images/a_note3.gif" width=13 height=31 border=0><img name="b_d" src="images/a_note1.gif" width=13 height=31 border=0><img name="a_d" src="images/a_note1.gif" width=13 height=31 border=0><br><img name="f_e" src="images/a_note1.gif" width=13 height=31 border=0><img name="e_e" src="images/a_note1.gif" width=13 height=31 border=0><img name="d_e" src="images/a_note1.gif" width=13 height=31 border=0><img name="c_e" src="images/a_note1.gif" width=13 height=31 border=0><img name="b_e" src="images/a_note1.gif" width=13 height=31 border=0><img name="a_e" src="images/a_note1.gif" width=13 height=31 border=0><br></nobr>
+</td>
+<td rowspan=4>
+&nbsp;
+&nbsp;
+&nbsp;
+</td>
+<td colspan=2 align=center> 
+<input type="textarea" size=27 name="t">
+</td>
+<td rowspan=4>
+<select name="achord" onFocus="document.guitar.reset(); r();">
+<option>A
+<option>Asus4
+<option>A(flat 5)
+<option>A add9
+<option>A5
+<option>Am
+<option>A+
+<option>A<sup>O</sup>7
+<option>A6
+<option>A6/9
+<option>Am6/9
+<option>Am6
+<option>A7
+<option>A7 sus4
+<option>Am7
+<option>Am7 flat5
+<option>A7#5
+<option>A7 flat5
+<option>A maj7
+<option>A maj7 flat5
+<option>Ammaj7
+<option>A7 flat9
+<option>A7#9
+<option>A7#5flat9
+<option>Am9
+<option>A9
+<option>A9#5
+<option>A9 flat5
+<option>Amaj9
+<option>A9#11
+<option>Am9maj7
+<option>A11
+<option>Am11
+<option>A13
+<option>A13flat9
+<option>A13flat9flat5
+<option selected>A Chords
+</select>
+<br>
+<select name="dchord" onFocus="document.guitar.reset(); r();">
+<option>
+<option>
+<option>
+Coming
+<option>
+ Soon!
+<option>
+<option selected>D Chords
+</select>
+</td>
+</tr>
+<tr>
+<td>
+The Root note is:&nbsp;
+<input type="textarea" size=2 name="o">
+</td>
+<td>
+<input type=reset onClick="r()">
+</td>
+</tr>
+</form>
+<form name="formtwo">
+<td colspan=2 align="right">
+Root Note?
+Red<input type="radio" name="yes" onClick="k=1">
+Black<input type="radio" name="yes" onClick="k=2">
+</td>
+</tr>
+<tr>
+<td colspan=2 align="right">
+Fings?
+Show<input type="radio" name="root" onClick="f=1">
+Hide<input type="radio" name="root" onClick="f=2">
+</td>
+</tr>
+</table>
+			</div>
+			<p align="center">
+<input type=button value="Make it So" onClick="doit(this.form);">
+</form>
+			</p>
+			<p>
+<br>
+The top white dot represents the fifth fret, or position V.  Change the fret to change the chord.
+</center>
+</font>
+			
+			
+			
+			
+			
+			</td>
+			<td width="15%" valign="top">
+			<!--webbot bot="Include" U-Include="../includes/right_nav.html" TAG="BODY" startspan -->
+
+
+	
+<img border="0" src="../images/Steve.jpg" width="187" height="180"><br>
+
+<table border="0" cellspacing="5" cellpadding="0">
+<tr>
+<td><font face="Arial" size=2>Website</font></td>
+<td><a target="_blank" href="https://steve.lovestoblog.com/"><font face="Arial" size=2>steve.lovestoblog.com</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Facebook</font></td>
+<td><a target="_blank" href="https://www.facebook.com/stephen.pleasants"><font face="Arial" size=2>stephen.pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>LinkedIn</font></td>
+<td><a target="_blank" href="https://www.linkedin.com/in/stephen-pleasants/"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>UpWork</font></td>
+<td><a target="_blank" href="https://www.upwork.com/freelancers/~017c1e57f0e4023e07"><font face="Arial" size=2>Stephen P.</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Reddit</font></td>
+<td><a target="_blank" href="https://www.reddit.com/user/SoylentAquaMarine/"><font face="Arial" size=2>u/SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>GitHub</font></td>
+<td><a target="_blank" href="https://github.com/SoylentAquamarine"><font face="Arial" size=2>SoylentAquamarine</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>YouTube</font></td>
+<td><a target="_blank" href="https://www.youtube.com/channel/UCjzmo4L1m2vle9DffKOfpzw"><font face="Arial" size=2>@StephenPleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Credly</font></td>
+<td><a target="_blank" href="https://www.credly.com/users/stephen-pleasants"><font face="Arial" size=2>stephen-pleasants</font></a></td>
+</tr><tr>
+<td><font face="Arial" size=2>Contact</font></td>
+<td><a href="mailto:stephen.pleasants@gmail.com?subject=from steve.lovestoblog.com"><font face="Arial" size=2>email me</font></a></td>
+</tr>
+</table>
+
+
+<!--webbot bot="Include" i-checksum="19559" endspan -->&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			&nbsp;</td>
+			<td>
+			<!--webbot bot="Include" U-Include="../includes/footer.html" TAG="BODY" startspan -->
+<basefont face="arial" size="3">
+<div align="center">
+	&nbsp;</div>
+<div align="center">
+	<font size="2"><i>Copyright &copy; 
+	1996-2026 Stephen Pleasants</i></div>
+<div align="center">
+	<i>All rights reserved</i></font></div>
+
+<!--webbot bot="Include" i-checksum="37816" endspan --></td>
+			<td>
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>
