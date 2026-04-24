@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Javascript Guitar</title>
+
+<style>
+  body {
+    font-family: Arial;
+    margin: 20px;
+  }
+
+  .neck {
+    text-align: center;
+    line-height: 0;
+  }
+
+  button {
+    background: #ccc;
+    border: 1px solid #999;
+    padding: 5px 8px;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Javascript Guitar</h2>
+
+<div class="neck" id="neck"></div>
+
+<br><br><br><br>
+<div style="margin-top:30px;">
+  <div id="noteButtons" style="display:flex; gap:4px; flex-wrap:wrap;"></div>
+</div>
+
+<div style="margin-top:10px;">
+  <label><input type="radio" name="color" value="black" checked> Black</label>
+  <label style="margin-left:10px;"><input type="radio" name="color" value="red"> Red</label>
+</div>
+
+<div style="margin-top:10px;">
+  <label><input type="checkbox" id="leaveNotes"> Leave notes on the neck</label>
+</div>
+
+<div style="margin-top:10px;">
+  <button id="resetBtn">Reset</button>
+</div>
+
+<div style="margin-top:30px;">
+  <strong>Scale:</strong>
+  <select id="scaleType" style="margin-left:6px;">
+    <option>Major</option>
+    <option>Minor</option>
+    <option>Min Pent</option>
+    <option>Maj Pent</option>
+    <option>Blues</option>
+  </select>
+  <label style="margin-left:10px;"><input type="radio" name="rootColor" value="black" checked> Root Black</label>
+  <label style="margin-left:8px;"><input type="radio" name="rootColor" value="red"> Root Red</label>
+  <div id="scaleButtons" style="display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;"></div>
+</div>
+
+<div style="margin-top:30px;">
+  <strong>Chord:</strong>
+  <label style="margin-left:8px;"><input type="radio" name="chordMode" value="dot" checked> Dots</label>
+  <label style="margin-left:8px;"><input type="radio" name="chordMode" value="fingering"> Fingerings</label>
+  <div id="chordButtons" style="display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;"></div>
+</div>
+
+<div style="margin-top:30px;">
+  <strong>Barre:</strong>
+  <select id="barreShape" style="margin-left:6px;">
+    <option>E Maj</option>
+    <option>E Min</option>
+    <option>A Maj</option>
+    <option>A Min</option>
+  </select>
+  <div id="barreButtons" style="display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;"></div>
+</div>
+
+<script>
+
+// ===================== CONFIG =====================
+const STRINGS = 6;
+const FRETS = 23;
+
+const NOTES = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+
+// ===================== STATES =====================
+const STATE = {
+  DEFAULT:    1,
+  BLACK_DOT:  2,
+  BLACK_ONE:  3,
+  BLACK_TWO:  4,
+  BLACK_THREE:5,
+  BLACK_FOUR: 6,
+  RED_DOT:    7,
+  RED_ONE:    8,
+  RED_TWO:    9,
+  RED_THREE: 10,
+  RED_FOUR:  11
+};
+
+const TUNING = {
+  1: "E",
+  2: "B",
+  3: "G",
+  4: "D",
+  5: "A",
+  6: "E"
+};
+
+// ===================== DOT POSITIONS =====================
+const upperDots = new Set([
+  "4,3","4,5","4,7","4,9",
+  "4,15","4,17","4,19","4,21",
+  "6,12","2,12"
+]);
+
+const lowerDots = new Set([
+  "3,3","3,5","3,7","3,9",
+  "3,15","3,17","3,19","3,21",
+  "5,12",
+  "1,12"
+]);
+
+// ===================== IMAGE MAPS =====================
+const NORMAL = {
+  1:"note1.gif",2:"note2.gif",3:"note21.gif",4:"note22.gif",5:"note23.gif",
+  6:"note24.gif",7:"note25.gif",8:"note215.gif",9:"note225.gif",
+  10:"note235.gif",11:"note245.gif"
+};
+
+const LOWER_DOT = {
+  1:"note3.gif",2:"note4.gif",3:"note41.gif",4:"note42.gif",5:"note43.gif",
+  6:"note44.gif",7:"note45.gif",8:"note415.gif",9:"note425.gif",
+  10:"note435.gif",11:"note445.gif"
+};
+
+const UPPER_DOT = {
+  1:"note5.gif",2:"note6.gif",3:"note61.gif",4:"note62.gif",5:"note63.gif",
+  6:"note64.gif",7:"note65.gif",8:"note615.gif",9:"note625.gif",
+  10:"note635.gif",11:"note645.gif"
+};
+
+const NUT = {
+  0:"note8.gif",
+  1:"note7.gif",
+  7:"note75.gif"
+};
+
+// ===================== IMAGE PRELOAD =====================
+function preloadImages(){
+  const all = [];
+
+  function add(map){
+    for(const k in map){
+      all.push("images/" + map[k]);
+    }
+  }
+
+  add(NORMAL);
+  add(LOWER_DOT);
+  add(UPPER_DOT);
+  add(NUT);
+
+  all.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+}
+
+preloadImages();
+
+// ===================== STATE =====================
+let neck = [];
+let noteMap = {};
+
+// ===================== HELPERS =====================
+function getCellType(s,f){
+  if(f===0) return "nut";
+  const k = `${s},${f}`;
+  if(upperDots.has(k)) return "upperDot";
+  if(lowerDots.has(k)) return "lowerDot";
+  return "normal";
+}
+
+function getImage(cell){
+  if(cell.type === "nut") return NUT[cell.state];
+  if(cell.type === "upperDot") return UPPER_DOT[cell.state];
+  if(cell.type === "lowerDot") return LOWER_DOT[cell.state];
+  return NORMAL[cell.state];
+}
+
+// ===================== STATE RULE =====================
+// Nut offsets: DEFAULT=0, BLACK_DOT=1, RED_DOT=7 — getImage handles via NUT map
+function setCellState(cell, state){
+  if(cell.type === "nut"){
+    if(state === STATE.DEFAULT)   { cell.state = 0; return; }
+    if(state === STATE.BLACK_DOT) { cell.state = 1; return; }
+    if(state === STATE.RED_DOT)   { cell.state = 7; return; }
+    return;
+  }
+  cell.state = state;
+}
+
+// ===================== BUILD NECK =====================
+function buildNeck(){
+  neck = [];
+
+  for(let s=1;s<=STRINGS;s++){
+    neck[s] = [];
+
+    for(let f=0;f<FRETS;f++){
+      const type = getCellType(s,f);
+
+      neck[s][f] = {
+        string: s,
+        fret: f,
+        type: type,
+        state: (type === "nut" ? 0 : 1)
+      };
+    }
+  }
+}
+
+// ===================== NOTE MAP =====================
+function buildNoteMap(){
+  noteMap = {};
+  NOTES.forEach(n => noteMap[n] = []);
+
+  const idx = {};
+  NOTES.forEach((n,i)=>idx[n]=i);
+
+  for(let s=1;s<=STRINGS;s++){
+    const open = idx[TUNING[s]];
+    for(let f=0;f<FRETS;f++){
+      const note = NOTES[(open + f) % 12];
+      noteMap[note].push({string:s,fret:f});
+    }
+  }
+}
+
+// ===================== RENDER =====================
+function render(){
+  const el = document.getElementById("neck");
+  el.innerHTML = "";
+
+  for(let s=1;s<=STRINGS;s++){
+    for(let f=0;f<FRETS;f++){
+      const c = neck[s][f];
+
+      const img = document.createElement("img");
+      img.src = "images/" + getImage(c);
+      img.width = 31;
+      img.height = 13;
+
+      el.appendChild(img);
+    }
+    el.appendChild(document.createElement("br"));
+  }
+}
+
+// ===================== BUTTONS =====================
+function buildButtons(){
+  const el = document.getElementById("noteButtons");
+
+  NOTES.forEach(n=>{
+    const b = document.createElement("button");
+    b.textContent = n;
+
+    b.onclick = () => {
+      const leave = document.getElementById("leaveNotes").checked;
+      const color = document.querySelector('input[name="color"]:checked').value;
+      const state = color === "red" ? STATE.RED_DOT : STATE.BLACK_DOT;
+
+      if(!leave) buildNeck();
+      noteMap[n].forEach(p => setCellState(neck[p.string][p.fret], state));
+      render();
+    };
+
+    el.appendChild(b);
+  });
+}
+
+// ===================== PUBLIC API =====================
+const Guitar = {
+  highlight(positions, state){ positions.forEach(p => setCellState(neck[p.string][p.fret], state)); render(); },
+  clear(){ buildNeck(); },
+  reset(){ buildNeck(); render(); },
+  get noteMap(){ return noteMap; },
+  get neck(){ return neck; },
+  render
+};
+
+// ===================== SCALES =====================
+const SCALE_INTERVALS = {
+  "Major":    [0,2,4,5,7,9,11],
+  "Minor":    [0,2,3,5,7,8,10],
+  "Min Pent": [0,3,5,7,10],
+  "Maj Pent": [0,2,4,7,9],
+  "Blues":    [0,3,5,6,7,10]
+};
+
+function getScaleData(root, type){
+  const rootIdx = NOTES.indexOf(root);
+  const rootPositions = Guitar.noteMap[root];
+  const otherPositions = SCALE_INTERVALS[type]
+    .filter(i => i !== 0)
+    .map(i => NOTES[(rootIdx + i) % 12])
+    .flatMap(n => Guitar.noteMap[n]);
+  return { rootPositions, otherPositions };
+}
+
+function buildScaleButtons(){
+  const el = document.getElementById("scaleButtons");
+  NOTES.forEach(n => {
+    const b = document.createElement("button");
+    b.textContent = n;
+    b.onclick = () => {
+      const leave = document.getElementById("leaveNotes").checked;
+      const color = document.querySelector('input[name="color"]:checked').value;
+      const rootColor = document.querySelector('input[name="rootColor"]:checked').value;
+      const noteState = color === "red" ? STATE.RED_DOT : STATE.BLACK_DOT;
+      const rootState = rootColor === "red" ? STATE.RED_DOT : STATE.BLACK_DOT;
+      if(!leave) Guitar.clear();
+      const {rootPositions, otherPositions} = getScaleData(n, document.getElementById("scaleType").value);
+      Guitar.highlight(otherPositions, noteState);
+      Guitar.highlight(rootPositions, rootState);
+    };
+    el.appendChild(b);
+  });
+}
+
+// ===================== CHORDS =====================
+const CHORDS = {
+  "C":  [{string:5,fret:3,finger:3},{string:4,fret:2,finger:2},{string:3,fret:0,finger:0},{string:2,fret:1,finger:1},{string:1,fret:0,finger:0}],
+  "D":  [{string:4,fret:0,finger:0},{string:3,fret:2,finger:1},{string:2,fret:3,finger:3},{string:1,fret:2,finger:2}],
+  "E":  [{string:6,fret:0,finger:0},{string:5,fret:2,finger:2},{string:4,fret:2,finger:3},{string:3,fret:1,finger:1},{string:2,fret:0,finger:0},{string:1,fret:0,finger:0}],
+  "F":  [{string:6,fret:1,finger:1},{string:5,fret:3,finger:3},{string:4,fret:3,finger:4},{string:3,fret:2,finger:2},{string:2,fret:1,finger:1},{string:1,fret:1,finger:1}],
+  "G":  [{string:6,fret:3,finger:2},{string:5,fret:2,finger:1},{string:4,fret:0,finger:0},{string:3,fret:0,finger:0},{string:2,fret:0,finger:0},{string:1,fret:3,finger:3}],
+  "A":  [{string:5,fret:0,finger:0},{string:4,fret:2,finger:1},{string:3,fret:2,finger:2},{string:2,fret:2,finger:3},{string:1,fret:0,finger:0}],
+  "Em": [{string:6,fret:0,finger:0},{string:5,fret:2,finger:2},{string:4,fret:2,finger:3},{string:3,fret:0,finger:0},{string:2,fret:0,finger:0},{string:1,fret:0,finger:0}],
+  "Am": [{string:5,fret:0,finger:0},{string:4,fret:2,finger:2},{string:3,fret:2,finger:3},{string:2,fret:1,finger:1},{string:1,fret:0,finger:0}],
+  "Dm": [{string:4,fret:0,finger:0},{string:3,fret:2,finger:1},{string:2,fret:3,finger:3},{string:1,fret:1,finger:2}],
+  "E7": [{string:6,fret:0,finger:0},{string:5,fret:2,finger:2},{string:4,fret:0,finger:0},{string:3,fret:1,finger:1},{string:2,fret:0,finger:0},{string:1,fret:0,finger:0}],
+  "A7": [{string:5,fret:0,finger:0},{string:4,fret:2,finger:2},{string:3,fret:0,finger:0},{string:2,fret:2,finger:3},{string:1,fret:0,finger:0}],
+  "D7": [{string:4,fret:0,finger:0},{string:3,fret:2,finger:1},{string:2,fret:1,finger:2},{string:1,fret:2,finger:3}],
+  "G7": [{string:6,fret:3,finger:3},{string:5,fret:2,finger:2},{string:4,fret:0,finger:0},{string:3,fret:0,finger:0},{string:2,fret:1,finger:1},{string:1,fret:1,finger:4}],
+  "C7": [{string:5,fret:3,finger:3},{string:4,fret:2,finger:2},{string:3,fret:3,finger:4},{string:2,fret:1,finger:1},{string:1,fret:0,finger:0}],
+  "B7": [{string:5,fret:2,finger:2},{string:4,fret:1,finger:1},{string:3,fret:2,finger:3},{string:2,fret:0,finger:0},{string:1,fret:2,finger:4}]
+};
+
+function fingerState(finger, isRed){
+  if(!finger) return isRed ? STATE.RED_DOT : STATE.BLACK_DOT;
+  return (isRed ? STATE.RED_ONE : STATE.BLACK_ONE) + finger - 1;
+}
+
+function buildChordButtons(){
+  const el = document.getElementById("chordButtons");
+  Object.keys(CHORDS).forEach(name => {
+    const b = document.createElement("button");
+    b.textContent = name;
+    b.onclick = () => {
+      const leave = document.getElementById("leaveNotes").checked;
+      const isRed = document.querySelector('input[name="color"]:checked').value === "red";
+      const showFingering = document.querySelector('input[name="chordMode"]:checked').value === "fingering";
+      if(!leave) Guitar.clear();
+      const positions = CHORDS[name].map(p => ({
+        string: p.string,
+        fret: p.fret,
+        state: showFingering ? fingerState(p.finger, isRed) : (isRed ? STATE.RED_DOT : STATE.BLACK_DOT)
+      }));
+      positions.forEach(p => setCellState(Guitar.neck[p.string][p.fret], p.state));
+      Guitar.render();
+    };
+    el.appendChild(b);
+  });
+}
+
+// ===================== BARRE CHORDS =====================
+const BARRE_SHAPES = {
+  "E Maj": [{string:6,fret:0,finger:1},{string:5,fret:2,finger:3},{string:4,fret:2,finger:4},{string:3,fret:1,finger:2},{string:2,fret:0,finger:1},{string:1,fret:0,finger:1}],
+  "E Min": [{string:6,fret:0,finger:1},{string:5,fret:2,finger:3},{string:4,fret:2,finger:4},{string:3,fret:0,finger:1},{string:2,fret:0,finger:1},{string:1,fret:0,finger:1}],
+  "A Maj": [{string:5,fret:0,finger:1},{string:4,fret:2,finger:3},{string:3,fret:2,finger:4},{string:2,fret:2,finger:2},{string:1,fret:0,finger:1}],
+  "A Min": [{string:5,fret:0,finger:1},{string:4,fret:2,finger:3},{string:3,fret:2,finger:4},{string:2,fret:1,finger:2},{string:1,fret:0,finger:1}]
+};
+
+function getBarrePositions(root, shape){
+  const rootString = shape.startsWith("E") ? 6 : 5;
+  const openIdx = NOTES.indexOf(TUNING[rootString]);
+  const rootIdx = NOTES.indexOf(root);
+  let baseFret = (rootIdx - openIdx + 12) % 12;
+  if(baseFret === 0) baseFret = 12;
+  return BARRE_SHAPES[shape].map(p => ({string:p.string, fret:p.fret + baseFret, finger:p.finger}));
+}
+
+function buildBarreButtons(){
+  const el = document.getElementById("barreButtons");
+  NOTES.forEach(n => {
+    const b = document.createElement("button");
+    b.textContent = n;
+    b.onclick = () => {
+      const leave = document.getElementById("leaveNotes").checked;
+      const isRed = document.querySelector('input[name="color"]:checked').value === "red";
+      const showFingering = document.querySelector('input[name="chordMode"]:checked').value === "fingering";
+      const shape = document.getElementById("barreShape").value;
+      if(!leave) Guitar.clear();
+      getBarrePositions(n, shape).forEach(p => {
+        setCellState(Guitar.neck[p.string][p.fret], showFingering ? fingerState(p.finger, isRed) : (isRed ? STATE.RED_DOT : STATE.BLACK_DOT));
+      });
+      Guitar.render();
+    };
+    el.appendChild(b);
+  });
+}
+
+// ===================== RESET =====================
+document.getElementById("resetBtn").onclick = () => Guitar.reset();
+
+// ===================== INIT =====================
+buildNeck();
+buildNoteMap();
+buildButtons();
+buildScaleButtons();
+buildChordButtons();
+buildBarreButtons();
+render();
+
+</script>
+
+</body>
+</html>
