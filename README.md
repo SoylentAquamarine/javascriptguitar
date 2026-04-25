@@ -10,6 +10,11 @@ An interactive guitar fretboard visualizer built in vanilla JavaScript. Displays
 
 ## Changelog
 
+### 2026-04-25
+
+**GitHub Pages**
+- Verified and active: [soylentaquamarine.github.io/javascriptguitar](https://soylentaquamarine.github.io/javascriptguitar/)
+
 ### 2026-04-24
 
 - Added scales display mode — visualize major, minor, pentatonic, and other scales across the fretboard
