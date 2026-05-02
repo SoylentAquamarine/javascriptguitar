@@ -7,11 +7,11 @@
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 700px; margin: 60px auto; padding: 0 20px; color: #222; line-height: 1.65; }
     h1 { font-size: 1.8rem; margin-bottom: 6px; }
-    p.sub { color: #666; margin-bottom: 36px; }
+    p.sub { color: #666; margin-bottom: 24px; }
+    .bp-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+    .bp-nav a { font-size: 0.85rem; padding: 6px 16px; border-radius: 20px; border: 1px solid #ddd; color: #0070c0; text-decoration: none; }
+    .bp-nav a:hover { border-color: #0070c0; background: #e8f0fe; }
     h2 { font-size: 1.1rem; font-weight: 700; margin: 32px 0 12px; color: #333; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-    .links { display: flex; flex-wrap: wrap; gap: 10px; }
-    a.doc-link { display: inline-block; background: #f4f4f4; border: 1px solid #ddd; border-radius: 8px; padding: 10px 18px; text-decoration: none; color: #0070c0; font-size: 0.9rem; }
-    a.doc-link:hover { background: #e8f0fe; border-color: #aac4f0; }
     a.site-link { color: #0070c0; }
     footer { margin-top: 60px; font-size: 0.82rem; color: #999; border-top: 1px solid #eee; padding-top: 16px; }
   </style>
@@ -19,11 +19,10 @@
 <body>
 
   <h1>Javascript Guitar</h1>
-  <p class="sub">Developer documentation portal · <a class="site-link" href="../index.html">← Back to site</a></p>
+  <p class="sub">Developer documentation · <a class="site-link" href="../index.html">← Back to site</a></p>
 
-  <h2>Blueprints</h2>
-  <div class="links">
-    <a class="doc-link" href="blueprints/system-overview.html">System Overview</a>
+  <div class="bp-nav">
+    <a href="blueprints/system-overview.html">System Overview</a>
   </div>
 
   <h2>Live Site</h2>
