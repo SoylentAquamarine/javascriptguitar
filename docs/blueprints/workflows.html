@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflows — Javascript Guitar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 860px; margin: 0 auto; padding: 0 20px; color: #222; line-height: 1.7; background: #fff; }
+    a { color: #0070c0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bp-nav { display: flex; gap: 8px; flex-wrap: wrap; padding: 0.75rem 0; border-bottom: 1px solid #eee; margin-bottom: 0; }
+    .bp-nav a { font-size: 0.82rem; padding: 0.3rem 0.9rem; border-radius: 20px; text-decoration: none; border: 1px solid #ddd; color: #555; }
+    .bp-nav a:hover { border-color: #0070c0; color: #0070c0; }
+    .bp-nav a.home { background: #0070c0; color: #fff; border-color: #0070c0; font-weight: 700; }
+    .bp-nav a.home:hover { opacity: 0.85; }
+    .bp-nav a.current { border-color: #0070c0; color: #0070c0; font-weight: 700; cursor: default; }
+    header { padding: 2rem 0 1.5rem; border-bottom: 1px solid #eee; }
+    header h1 { font-size: 1.7rem; font-weight: 700; color: #111; }
+    header p.meta { color: #999; font-size: 0.85rem; margin-top: 0.4rem; }
+    main { padding: 2rem 0; }
+    h2 { font-size: 1.1rem; font-weight: 700; color: #333; margin: 2.2rem 0 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid #eee; }
+    p { margin-bottom: 0.85rem; } p:last-child { margin-bottom: 0; }
+    ul { margin: 0.5rem 0 0.85rem 1.4rem; } li { margin-bottom: 0.35rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.8rem 0 1rem; font-size: 0.88rem; }
+    th { background: #f5f5f5; color: #333; padding: 0.55rem 1rem; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #eee; }
+    td { padding: 0.5rem 1rem; border-bottom: 1px solid #eee; }
+    tr:last-child td { border-bottom: none; } tr:hover td { background: #f9f9f9; }
+    blockquote { border-left: 3px solid #0070c0; margin: 1rem 0; padding: 0.6rem 1rem; color: #555; font-style: italic; background: #f0f6ff; border-radius: 0 6px 6px 0; }
+    footer { margin-top: 4rem; padding: 1.5rem 0; border-top: 1px solid #eee; color: #999; font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+
+<div class="bp-nav">
+  <a class="home" href="../index.html">← Home</a>
+  <a href="system-overview.html">System Overview</a>
+  <a href="architecture.html">Architecture</a>
+  <a href="data-pipeline.html">Data Pipeline</a>
+  <a href="health-system.html">Health System</a>
+  <a href="usage-system.html">Usage System</a>
+  <a class="current">Workflows</a>
+  <a href="mcp-tools.html">MCP Tools</a>
+</div>
+
+<header>
+  <h1>Workflows — Javascript Guitar</h1>
+  <p class="meta">Blueprint · Last updated 2026-05-02</p>
+</header>
+
+<main>
+
+<h2>No Programmatic Workflow System</h2>
+<p>Javascript Guitar does not have an application workflow engine. There are no task queues, state machines, or multi-step automated processes. All interaction is direct and synchronous: user action → immediate visual response.</p>
+
+<blockquote>The "workflow" in this project is a guitarist exploring the fretboard — it is entirely in the user's hands, not the application's.</blockquote>
+
+<h2>User-Facing Tools</h2>
+<p>The site provides several independent tools, each on its own HTML page. These are not linked programmatically — the user navigates between them manually.</p>
+<table>
+  <tr><th>Tool</th><th>File</th><th>Description</th></tr>
+  <tr><td>Note Builder</td><td><code>original/index.html</code></td><td>Click fret positions to visualize individual notes</td></tr>
+  <tr><td>Barre Chord Builder</td><td><code>original/barrechords.html</code></td><td>Explore barre chord shapes across the neck</td></tr>
+  <tr><td>Misc Chords</td><td><code>original/chordsminmaj.html</code></td><td>Major and minor chord diagrams</td></tr>
+  <tr><td>Scales</td><td><code>original/scales.html</code></td><td>Scale pattern visualizations</td></tr>
+  <tr><td>A &amp; D Variations</td><td><code>original/a_chordsbig.html</code></td><td>Chord variations on A and D</td></tr>
+  <tr><td>Misc Chords 2</td><td><code>original/b_chords.html</code></td><td>Additional chord shapes</td></tr>
+  <tr><td>A Chords Vertical</td><td><code>original/a_chords.html</code></td><td>Vertical fretboard view for A chords</td></tr>
+  <tr><td>Optimized Version</td><td><code>optimized/index.html</code></td><td>Modern rebuild of the full toolset</td></tr>
+</table>
+
+<h2>Development Workflow</h2>
+<p>When modifying the project, the only applicable workflow is:</p>
+<ul>
+  <li>Edit files in <code>optimized/</code> only — never touch <code>original/</code>.</li>
+  <li>Open the HTML file directly in a browser to test (no dev server needed).</li>
+  <li>Commit to <code>main</code> — GitHub Pages deploys automatically on push.</li>
+</ul>
+
+</main>
+
+<footer>Blueprint · Javascript Guitar · <a href="../index.html">← Back to docs</a></footer>
+</body>
+</html>

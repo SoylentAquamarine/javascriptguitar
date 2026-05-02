@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Pipeline — Javascript Guitar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 860px; margin: 0 auto; padding: 0 20px; color: #222; line-height: 1.7; background: #fff; }
+    a { color: #0070c0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bp-nav { display: flex; gap: 8px; flex-wrap: wrap; padding: 0.75rem 0; border-bottom: 1px solid #eee; margin-bottom: 0; }
+    .bp-nav a { font-size: 0.82rem; padding: 0.3rem 0.9rem; border-radius: 20px; text-decoration: none; border: 1px solid #ddd; color: #555; }
+    .bp-nav a:hover { border-color: #0070c0; color: #0070c0; }
+    .bp-nav a.home { background: #0070c0; color: #fff; border-color: #0070c0; font-weight: 700; }
+    .bp-nav a.home:hover { opacity: 0.85; }
+    .bp-nav a.current { border-color: #0070c0; color: #0070c0; font-weight: 700; cursor: default; }
+    header { padding: 2rem 0 1.5rem; border-bottom: 1px solid #eee; }
+    header h1 { font-size: 1.7rem; font-weight: 700; color: #111; }
+    header p.meta { color: #999; font-size: 0.85rem; margin-top: 0.4rem; }
+    main { padding: 2rem 0; }
+    h2 { font-size: 1.1rem; font-weight: 700; color: #333; margin: 2.2rem 0 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid #eee; }
+    p { margin-bottom: 0.85rem; } p:last-child { margin-bottom: 0; }
+    ul { margin: 0.5rem 0 0.85rem 1.4rem; } li { margin-bottom: 0.35rem; }
+    blockquote { border-left: 3px solid #0070c0; margin: 1rem 0; padding: 0.6rem 1rem; color: #555; font-style: italic; background: #f0f6ff; border-radius: 0 6px 6px 0; }
+    footer { margin-top: 4rem; padding: 1.5rem 0; border-top: 1px solid #eee; color: #999; font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+
+<div class="bp-nav">
+  <a class="home" href="../index.html">← Home</a>
+  <a href="system-overview.html">System Overview</a>
+  <a href="architecture.html">Architecture</a>
+  <a class="current">Data Pipeline</a>
+  <a href="health-system.html">Health System</a>
+  <a href="usage-system.html">Usage System</a>
+  <a href="workflows.html">Workflows</a>
+  <a href="mcp-tools.html">MCP Tools</a>
+</div>
+
+<header>
+  <h1>Data Pipeline — Javascript Guitar</h1>
+  <p class="meta">Blueprint · Last updated 2026-05-02</p>
+</header>
+
+<main>
+
+<h2>No Server-Side Data Pipeline</h2>
+<p>Javascript Guitar is a fully static site. There is no server, no API, no database, and no data transmission of any kind. All interaction happens entirely within the browser using preloaded assets.</p>
+
+<blockquote>The only "data" in this project is GIF images on disk. They are loaded once by the browser and swapped in-place on user interaction.</blockquote>
+
+<h2>Browser-Side Interaction Flow</h2>
+<p>The closest equivalent to a data pipeline is the image-swap cycle that powers the fretboard visualizer:</p>
+<ul>
+  <li>Page load: all GIF variants are preloaded into browser cache via <code>Image()</code> objects.</li>
+  <li>User clicks or hovers a fret/string position.</li>
+  <li>An inline event handler computes the target GIF filename from the position.</li>
+  <li><code>document.images[n].src</code> is replaced with the preloaded GIF path.</li>
+  <li>The browser renders the swapped image — no network request is made.</li>
+</ul>
+
+<h2>No Applicable Pipeline Features</h2>
+<p>The following pipeline concepts do not apply to this project:</p>
+<ul>
+  <li>API calls — none</li>
+  <li>Request routing — none</li>
+  <li>Authentication — none</li>
+  <li>Data transformation — none</li>
+  <li>Caching strategy — browser default only</li>
+  <li>Error handling — none beyond browser-native image load failures</li>
+</ul>
+
+</main>
+
+<footer>Blueprint · Javascript Guitar · <a href="../index.html">← Back to docs</a></footer>
+</body>
+</html>
